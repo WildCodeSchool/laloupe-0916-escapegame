@@ -1,0 +1,24 @@
+body{
+  background-color: black;
+  color: rgb(216,191,151)!important;
+font-size: 14px;
+}
+.nav-wrapper{
+  background-color: black;
+}
+a {
+  color: rgb(216,191,151)!important;
+}
+.navbar-fixed {
+  top:0;
+  position: fixed;
+}
+p{
+  font-size: 1.2em!important;
+}
+h4{
+  font-size: 1.2em;
+}
+#questionsmodal{
+  background-color: black;
+}

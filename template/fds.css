@@ -1,0 +1,24 @@
+  * {
+      margin: 0;
+      padding: 0;
+  }
+
+  body {
+      background-image: url(images.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+  }
+
+  .container-header {
+      background-image: url("banniere.jpg");
+      background-repeat: no-repeat;
+      color: #c7bda2;
+      text-align: center;
+      width: 1009px;
+      height: 467px;
+  }
+
+p {
+      height: 467px;
+      margin-top: 100px;
+  }
