@@ -9,40 +9,37 @@
         <link rel="stylesheet" href="fds.css"/>
     </head>
     <body>
-        <!--- navbar titre-->
-        <nav id="scrollspy" class="nav black">
-            <a class="brand-logo center">Escape Game de La loupe</a>
-        </nav>
         <!--- navbar catégories-->
-        <div class="nav-section" id="push">
-            <nav>
-                <div class="nav-wrapper">
-                    <div class="container">
-                        <div class="row">
-                            <ul class=" col l10 push-l2 hide-on-med-and-down">
-                                <li>
-                                    <a class="js-scrollTo" href="#accueil" class="waves-effect waves-yellow btn-small black" href="accueil.html">Accueil</a>
-                                </li>
-                                <li>
-                                    <a class="js-scrollTo" href="#enigmes" class="waves-effect waves-yellow btn-small black" href="enigmes.html">Enigmes</a>
-                                </li>
-                                <li>
-                                    <a class="js-scrollTo" href="#actu" class="waves-effect waves-yellow btn-small black" href="actu.html">Actualités</a>
-                                </li>
-                                <li>
-                                    <a class="js-scrollTo" href="#resa" class="waves-effect waves-yellow btn-small black" href="resa.html">Réservation et Tarifs</a>
-                                </li>
-                                <li>
-                                    <a class="js-scrollTo" href="#questions" class="waves-effect waves-yellow btn-small black" href="questions.html">Questions fréquentes</a>
-                                </li>
-                                <li>
-                                    <a class="js-scrollTo" href="#contacts" class="waves-effect waves-yellow btn-small black" href="contact.html">Contact</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </nav>
+        <div class="navbar-fixed">
+          <nav>
+            <div class="nav-wrapper ">
+              <a href="#!" class="brand-logo">Logo</a>
+              <ul class="right hide-on-med-and-down ">
+                <li>
+                    <a class="js-scrollTo" href="#accueil" class="waves-effect waves-yellow btn-small black" href="accueil.html">Accueil</a>
+                </li>
+                <li>
+                    <a class="js-scrollTo" href="#enigmes" class="waves-effect waves-yellow btn-small black" href="enigmes.html">Enigmes</a>
+                </li>
+                <li>
+                    <a class="js-scrollTo" href="#actu" class="waves-effect waves-yellow btn-small black" href="actu.html">Actualités</a>
+                </li>
+                <li>
+                    <a class="js-scrollTo" href="#resa" class="waves-effect waves-yellow btn-small black" href="resa.html">Réservation et Tarifs</a>
+                </li>
+                <li>
+                    <a class="js-scrollTo" href="#questions" class="waves-effect waves-yellow btn-small black" href="questions.html">Questions fréquentes</a>
+                </li>
+                <li>
+                    <a class="js-scrollTo" href="#contacts" class="waves-effect waves-yellow btn-small black" href="contact.html">Contact</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+        <!-- titre-->
+        <div class="titre">
+            <h1>Escape Game La Loupe</h1>
         </div>
         <!--- contenu acceuil-->
         <div class="container acceuil" id="accueil">
@@ -63,14 +60,14 @@
         <div class="container enigme" id="enigmes">
             <div class="row">
                 <div class="col l6 s12">
-                    <img class="materialboxed" width="500" src="img/chateaulaloupe.jpg" alt="chateau de la loupe">
-                </div>
-                <div class="col l6 s12">
                     <p class="flow-text">
                         Qu'est-ce que le Lorem Ipsum? Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un peintre anonyme
                         assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé
                         dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.
                     </p>
+                </div>
+                <div class="col l6 s12">
+                    <img class="materialboxed" width="500" src="img/chateaulaloupe.jpg" alt="chateau de la loupe">
                 </div>
             </div>
         </div>
@@ -93,14 +90,14 @@
         <div class="container reservation" id="resa">
             <div class="row">
                 <div class="col l6 m12">
-                    <img class="materialboxed" width="500" src="img/chateaulaloupe.jpg" alt="chateau de la loupe">
-                </div>
-                <div class="col l6 m12">
                     <p class="flow-text">
                         Qu'est-ce que le Lorem Ipsum? Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un peintre anonyme
                         assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé
                         dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.
                     </p>
+                </div>
+                <div class="col l6 m12">
+                    <img class="materialboxed" width="500" src="img/chateaulaloupe.jpg" alt="chateau de la loupe">
                 </div>
             </div>
         </div>
@@ -124,14 +121,20 @@
         <div class="container contact" id="contacts">
             <div class="row">
                 <div class="col l6 m12">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2645.289240569418!2d1.0130274155733017!3d48.470165379251384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e3c1f9b2ac6a3b%3A0x57568a7db096bab!2zQ2jDonRlYXU!5e0!3m2!1sfr!2sfr!4v1474655988853" width="450" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-                </div>
-                <div class="col l6 m12">
                     <p class="flow-text">
                         Qu'est-ce que le Lorem Ipsum? Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un peintre anonyme
                         assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé
                         dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.
                     </p>
+                </div>
+                <div class="col l6 m12">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2645.289240569418!2d1.0130274155733017!3d48.470165379251384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e3c1f9b2ac6a3b%3A0x57568a7db096bab!2zQ2jDonRlYXU!5e0!3m2!1sfr!2sfr!4v1474655988853"
+                        width="450"
+                        height="450"
+                        frameborder="0"
+                        style="border:0"
+                        allowfullscreen></iframe>
                 </div>
             </div>
         </div>
@@ -172,16 +175,6 @@
         </div>
         <!---Les Scripts --->
         <script>
-            $(document).ready(function() {
-                $(window).scroll(function() {
-                    if ($(window).scrollTop() > $('#scrollspy').height()) {
-                        $('#push').addClass('navbar-fixed');
-                    }
-                    if ($(window).scrollTop() < $('#scrollspy').height()) {
-                        $('#push').removeClass('navbar-fixed');
-                    }
-                });
-            });
             $(document).ready(function() {
                 $('.materialboxed').materialbox();
             });
