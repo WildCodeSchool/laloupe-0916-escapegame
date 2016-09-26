@@ -1,26 +1,50 @@
 body{
   background-color: black;
   color: rgb(216,191,151)!important;
-font-size: 14px;
+  font-size: 14px;
+}
+.parallax-container {
+  height: 100vh;
 }
 .titre{
   background-image: url(img/backgroundh1.jpg);
   background-repeat: no-repeat;
-  height: 100vh;
-  width: 100vw;
+  height: calc(100vh - 30px);
+}
+.brand-logo{
+  top: 15%;
+  left: 1%;
+  font-family: 'Tangerine', cursive;
+  font-size: 1em;
+}
+.namelogo{
+  margin-left: 7%;
+  font-family: 'Tangerine', bold;
+  font-size:  3em;
+}
+h1, h2{
+  font-family: 'Tangerine', cursive;
+  font-size: 9em;
+  position: relative;
+  top: 20%;
+  text-align: center;
 }
 h1{
-  font-size: 7em;
-  position: relative;
-  top: 50%;
-  text-align: center;
+  font-size: 10em;
+}
+.imagetitre{
+  position: absolute;
+  top: 85%;
+  left: 45%;
 }
 nav{
   background-color: rgba(0, 0, 0, 0.5);
   border-bottom:0.5px solid rgb(216,191,151);
 }
-ul{
+ul li a{
   color: rgb(216,191,151);
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3em;
 }
 a {
   color: rgb(216,191,151)!important;
