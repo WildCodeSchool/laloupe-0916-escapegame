@@ -24,6 +24,9 @@ body{
   font-family: 'Tangerine', bold;
   font-size:  3em;
 }
+.time{
+  margin: 8% 15% 0 20%;
+}
 .horloge{
   position: absolute;
 }
@@ -83,7 +86,6 @@ h4{
 .materialboxed{
   width: 100%;
 }
-<<<<<<< HEAD
 .container, .row {
   width: auto;
   height:50%;
@@ -92,24 +94,3 @@ h4{
   font-family: 'Playfair Display', serif;
   font-size: 1.1em;
 }
-=======
-.container, .row{
-  width: 100vw;
-  height: 100vh;
-  padding: 0;
-  margin: 0;
-}
-.gauche{
-  width: 50%;
-  height: 100%;
-  left: 0;
-}
-.droite{
-  width: 50%;
-  height: 100%;
-  right: 0;
-}
-{
-
-}
->>>>>>> 96b31923ed9f2f68d252e3425f5ec1d483ad15a6
