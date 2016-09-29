@@ -1,16 +1,113 @@
-.navbar-yellow {
-    background-color: #FFF94D;
-    border: none;
-    margin: 0;
-    padding: 0;
-    width: 100vw;
-    border-radius: 0;
-    border-bottom: 2px solid black;
+@keyframes rotate {
+    100% {
+        transform: rotateZ(360deg);
+    }
 }
-.navbar-brand img {
-    max-height: 100%;
-    transition: 0.8s;
+
+body {
+    background-color: black;
+    color: rgb(216, 191, 151)!important;
+    font-size: 14px;
 }
-.navbar-brand:hover img {
-    transform: rotate(360deg);
+
+.titre {
+    background-image: url(../img/backgroundh1.jpg);
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.brand-logo {
+    top: 15%;
+    left: 1%;
+    font-family: 'Tangerine', cursive;
+    font-size: 1em;
+}
+
+.namelogo {
+    margin-left: 7%;
+    font-family: 'Tangerine', bold;
+    font-size: 3em;
+}
+
+.time {
+    margin: 8% 15% 0 20%;
+}
+
+.horloge {
+    position: absolute;
+}
+
+.aiguille {
+    position: absolute;
+    animation: rotate 60s infinite linear;
+}
+
+h1, h2 {
+    font-family: 'Tangerine', cursive;
+    font-size: 9em;
+    position: relative;
+    top: 20%;
+    text-align: center;
+}
+
+.titrearticles {
+    font-family: 'Tangerine', cursive;
+    font-size: 8em;
+    text-align: center;
+}
+
+h1 {
+    font-size: 10em;
+}
+
+.imagetitre {
+    position: absolute;
+    top: 85%;
+    left: 45%;
+}
+
+nav {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-bottom: 0.5px solid rgb(216, 191, 151);
+}
+
+ul li a {
+    color: rgb(216, 191, 151);
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3em;
+}
+
+a {
+    color: rgb(216, 191, 151)!important;
+}
+
+.navbar-fixed {
+    top: 0;
+    position: fixed;
+    height: 5vh;
+}
+
+p {
+    font-size: 1.2em!important;
+}
+
+h4 {
+    font-size: 1.2em;
+}
+
+#questionsmodal {
+    background-color: black;
+}
+
+.materialboxed {
+    width: 100%;
+}
+
+.container, .row {
+    width: auto;
+    height: 50%;
+    padding-top: 5vh;
+    margin: auto;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1em;
 }

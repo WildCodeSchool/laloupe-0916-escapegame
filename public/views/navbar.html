@@ -1,32 +1,29 @@
-<nav class="navbar navbar-inverse navbar-yellow" role="navigation" ng-controller='navbarController as vm'>
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#/"><img src="assets/img/logo.png"/></a>
-        </div>
-        <div class="collapse navbar-collapse" id="navbar">
-            <ul class="nav navbar-nav navbar-right">
-                <li class="active" ng-show='vm.isLogged'>
-                    <a href="#/"><span class="glyphicon glyphicon-book"></span>&nbsp;Todos</a>
+<!--- navbar catégories-->
+<div class="navbar-fixed">
+    <nav>
+        <div class="nav-wrapper">
+            <a href="#ancre" class="brand-logo js-scrollTo"><img src="assets/img/symbole.gif" alt="symbole" width="22%"/></a>
+            <a class="namelogo">Escape Game</a>
+            <ul class="right hide-on-med-and-down ">
+                <li>
+                    <a class="js-scrollTo" href="#accueil" class="waves-effect waves-yellow btn-small black" href="accueil.html">Accueil</a>
                 </li>
-                <li class='disabled' ng-show='vm.sessionFactory.user.isAdmin'>
-                    <a href="#/"><span class="glyphicon glyphicon-dashboard"></span>&nbsp;Admin</a>
+                <li>
+                    <a class="js-scrollTo" href="#enigmes" class="waves-effect waves-yellow btn-small black" href="enigmes.html">Enigmes</a>
                 </li>
-                <li class='disabled' ng-show='vm.isLogged'>
-                    <a href="#/"><span class="glyphicon glyphicon-user"></span>&nbsp;My account</a>
+                <li>
+                    <a class="js-scrollTo" href="#actu" class="waves-effect waves-yellow btn-small black" href="actu.html">Actualités</a>
                 </li>
-                <li ng-show='vm.isLogged'>
-                    <a href="" ng-click='vm.logout()'><span class="glyphicon glyphicon-log-out"></span>&nbsp;Sign out</a>
+                <li>
+                    <a class="js-scrollTo" href="#resa" class="waves-effect waves-yellow btn-small black" href="resa.html">Réservation et Tarifs</a>
                 </li>
-                <li class='active' ng-hide='vm.isLogged'>
-                    <a href="#/login"><span class="glyphicon glyphicon-log-in"></span>&nbsp;Sign in</a>
+                <li>
+                    <a class="js-scrollTo" href="#questions" class="waves-effect waves-yellow btn-small black" href="questions.html">Questions fréquentes</a>
+                </li>
+                <li>
+                    <a class="js-scrollTo" href="#contacts" class="waves-effect waves-yellow btn-small black" href="contact.html">Contact</a>
                 </li>
             </ul>
         </div>
-    </div>
-</nav>
+    </nav>
+</div>
