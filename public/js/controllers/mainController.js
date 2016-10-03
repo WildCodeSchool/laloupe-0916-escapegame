@@ -1,6 +1,11 @@
 class mainController {
 
     constructor() {
+class mainController {
+
+    constructor() {
+            $('.parallax').parallax();
+            $('.materialboxed').materialbox();
             $('.js-scrollTo').on('click', function() { // Au clic sur un élément
                 var page = $(this).attr('href'); // Page cible
                 var speed = 1000; // Durée de l'animation (en ms)
@@ -9,6 +14,12 @@ class mainController {
                 }, speed); // Go
                 return false;
             });
+                    scrollTop: $(page).offset().top
+                }, speed); // Go
+                return false;
+            });
+            // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+            $('.modal-trigger').leanModal();
             /*
               this.todoService = todoService;
               this.load();
