@@ -1,9 +1,6 @@
 class mainController {
 
     constructor() {
-class mainController {
-
-    constructor() {
             $('.parallax').parallax();
             $('.materialboxed').materialbox();
             $('.js-scrollTo').on('click', function() { // Au clic sur un élément
@@ -11,10 +8,6 @@ class mainController {
                 var speed = 1000; // Durée de l'animation (en ms)
                 $('html, body').animate({
                     scrollTop: $(page).offset().top - 100
-                }, speed); // Go
-                return false;
-            });
-                    scrollTop: $(page).offset().top
                 }, speed); // Go
                 return false;
             });
