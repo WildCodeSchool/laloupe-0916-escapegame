@@ -1,4 +1,4 @@
-angular.module('app', ['ngRoute'])
+angular.module('app', ['ngRoute', 'ui.materialize'])
         .factory('sessionFactory', sessionFactory)
         .service('userService', userService)
         .service('todoService', todoService)
