@@ -9,6 +9,15 @@ class mainController {
                 }, speed); // Go
                 return false;
             });
+            $(window).scroll(function() {
+                if ($(window).scrollTop() > $('#accueil').height()) {
+                    $('.navbar-fixed').addClass('navbar-color');
+                }
+                if ($(window).scrollTop() < $('#accueil').height()) {
+                    $('.navbar-fixed').removeClass('navbar-color');
+                }
+            });
+            $(".button-collapse").sideNav();
             /*
               this.todoService = todoService;
               this.load();
