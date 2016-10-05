@@ -9,7 +9,23 @@ body {
     color: rgb(216, 191, 151)!important;
     font-size: 14px;
 }
+/*NAV BAR*/
+nav {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-bottom: 0.5px solid rgb(216, 191, 151);
+}
 
+.navbar-color nav {
+    background-color: rgba(0, 0, 0, 1);
+}
+
+ul li a {
+    color: rgb(216, 191, 151);
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1em;
+}
+
+/*FIN NAV BAR*/
 .titre {
     background-image: url(../img/backgroundh1.jpg);
     background-repeat: no-repeat;
@@ -43,20 +59,27 @@ body {
     width: 100vw;
     height: 80vh;
 }
-
+/* HORLOGE*/
+@media (max-width: 992px) {
+  #horloge {
+    padding-bottom: 100% ;
+  }
+}
 .time {
     margin: 8% 15% 0 20%;
 }
-
-.horloge {
-    position: absolute;
+#accueil img{
+  width: 100%;
+  height: auto;
+  position: absolute;
 }
-
-.aiguille {
-    position: absolute;
-    animation: rotate 60s infinite linear;
+#horloge {
+  position: relative;
 }
-
+#aiguille{
+  animation: rotate 60s infinite linear;
+}
+/*FIN DE HORLOGE*/
 h1, h2 {
     font-family: 'Tangerine', cursive;
     font-size: 9em;
@@ -83,21 +106,6 @@ h2 {
     position: absolute;
     top: 85%;
     left: 45%;
-}
-
-nav {
-    background-color: rgba(0, 0, 0, 0.5);
-    border-bottom: 0.5px solid rgb(216, 191, 151);
-}
-
-.navbar-color nav {
-    background-color: rgba(0, 0, 0, 1);
-}
-
-ul li a {
-    color: rgb(216, 191, 151);
-    font-family: 'Playfair Display', serif;
-    font-size: 1.1em;
 }
 
 a {
@@ -172,4 +180,3 @@ tr:nth-child(odd) td {
 .footer {
     margin-top: 5%;
 }
->>>>>>> 2f90c097a167b951b9c73086809e2762c3bb0fe7
