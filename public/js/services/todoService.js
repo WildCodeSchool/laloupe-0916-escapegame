@@ -1,12 +1,13 @@
-class todoService {
+class adminService {
 
     constructor($http) {
         this.$http = $http;
     }
 
-    create(data) {
+    create(data1, data2) {
         return this.$http.post('/api/todos', {
-            description: data
+          nom_enigme: data1,
+          description_enigme: data2,
         })
     }
 
@@ -18,9 +19,10 @@ class todoService {
         return this.$http.get('/api/todos/' + id)
     }
 
-    update(id, data) {
+    update(id, data1,data2) {
         return this.$http.put('/api/todos/' + id, {
-            description: data
+            nom_enigme: data1,
+            description_enigme: data2
         })
     }
 
