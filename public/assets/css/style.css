@@ -9,8 +9,8 @@ body {
     color: rgb(216, 191, 151)!important;
     font-size: 14px;
     text-align: justify;
+    background-image: url(../img/backgroundh1.jpg);
 }
-
 
 /*NAV BAR*/
 
@@ -33,15 +33,13 @@ ul li a {
 /*FIN NAV BAR*/
 
 .titre {
-    background-image: url(../img/backgroundh1.jpg);
-    background-repeat: no-repeat;
     height: 100vh;
     margin-top: -100px;
 }
 
-.brand-logo {
+.logofm {
     top: 15%;
-    left: 1%;
+    left: 1%!important;
     font-family: 'Tangerine', cursive;
     font-size: 1em;
 }
@@ -201,3 +199,15 @@ tr:nth-child(odd) td {
 .image img {
     width: 70%;
 }
+/* css du formulaire*/
+input:focus, textarea:focus, input:focus + label, textarea:focus + label {
+   color: rgb(216, 191, 151)!important;
+   border-bottom:1px solid rgb(216, 191, 151)!important;
+   box-shadow:0 1px 0 0 rgb(216, 191, 151)!important;
+ }
+ .prefix.active {
+   color: rgb(216, 191, 151)!important;
+ }
+ .input-field label {
+  color: rgb(216, 191, 151)!important;
+ }
