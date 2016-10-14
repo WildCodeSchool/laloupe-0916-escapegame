@@ -1,0 +1,289 @@
+@keyframes rotate {
+    100% {
+        transform: rotateZ(360deg);
+    }
+}
+
+body {
+    background-color: black;
+    color: rgb(216, 191, 151)!important;
+    font-size: 14px;
+}
+
+.titre {
+    background-image: url(../img/backgroundh1.jpg);
+    background-repeat: no-repeat;
+    height: 100vh;
+
+}
+
+.brand-logo {
+    top: 15%;
+    left: 1%;
+    font-family: 'Tangerine', cursive;
+    font-size: 1em;
+}
+
+.namelogo {
+    margin-left: 7%;
+    font-family: 'Tangerine', bold;
+    font-size: 3em;
+}
+
+.time {
+    margin: 8% 15% 0 20%;
+}
+
+.horloge {
+    position: absolute;
+}
+
+.aiguille {
+    position: absolute;
+    animation: rotate 60s infinite linear;
+}
+
+h1, h2 {
+    font-family: 'Tangerine', cursive;
+    font-size: 9em;
+    position: relative;
+    top: 20%;
+    text-align: center;
+}
+
+.titrearticles {
+    font-family: 'Tangerine', cursive;
+    font-size: 8em;
+    text-align: center;
+}
+
+h1 {
+    font-size: 10em;
+}
+
+.imagetitre {
+    position: absolute;
+    top: 85%;
+    left: 45%;
+}
+
+nav {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-bottom: 0.5px solid rgb(216, 191, 151);
+}
+
+ul li a {
+    color: rgb(216, 191, 151);
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3em;
+}
+
+a {
+    color: rgb(216, 191, 151)!important;
+}
+
+.navbar-fixed {
+    top: 0;
+    position: fixed;
+    height: 5vh;
+}
+
+p {
+    font-size: 1.2em!important;
+}
+
+h4 {
+    font-size: 1.2em;
+}
+
+#questionsmodal {
+    background-color: black;
+}
+
+.materialboxed {
+    width: 100%;
+}
+
+.container, .row {
+    width: auto;
+    height: 50%;
+    padding-top: 5vh;
+    margin: auto;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1em;
+}
+=======
+@keyframes rotate {
+    100% {
+        transform: rotateZ(360deg);
+    }
+}
+
+body {
+    background-color: black;
+    color: rgb(216, 191, 151)!important;
+    font-size: 14px;
+}
+
+.titre {
+    background-image: url(../img/backgroundh1.jpg);
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin-top: -100px;
+}
+
+.brand-logo {
+    top: 15%;
+    left: 1%;
+    font-family: 'Tangerine', cursive;
+    font-size: 1em;
+}
+
+.namelogo {
+    margin-left: 7%;
+    font-family: 'Tangerine', bold;
+    font-size: 3em;
+}
+
+#accueil {
+    margin-top: 100px;
+}
+
+#actu, #resa, #questions, #enigmes, #accueil {
+    width: 100vw;
+    height: 100vh;
+}
+
+#contacts {
+    width: 100vw;
+    height: 80vh;
+}
+
+.time {
+    margin: 8% 15% 0 20%;
+}
+
+.horloge {
+    position: absolute;
+}
+
+.aiguille {
+    position: absolute;
+    animation: rotate 60s infinite linear;
+}
+
+h1, h2 {
+    font-family: 'Tangerine', cursive;
+    font-size: 9em;
+    position: relative;
+    top: 18%;
+    text-align: center;
+}
+
+h1 {
+    font-size: 10em;
+}
+
+h2 {
+    margin: 0!important;
+}
+
+.titrearticles {
+    font-family: 'Tangerine', cursive;
+    font-size: 8em;
+    text-align: center;
+}
+
+.imagetitre {
+    position: absolute;
+    top: 85%;
+    left: 45%;
+}
+
+nav {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-bottom: 0.5px solid rgb(216, 191, 151);
+}
+
+.navbar-color nav {
+    background-color: rgba(0, 0, 0, 1);
+}
+
+ul li a {
+    color: rgb(216, 191, 151);
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1em;
+}
+
+a {
+    color: rgb(216, 191, 151)!important;
+}
+
+p {
+    font-size: 1.2em!important;
+}
+
+h4 {
+    font-size: 1.2em;
+}
+
+.materialboxed {
+    width: 100%;
+}
+
+.container, .row {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1em;
+}
+
+.footer p {
+    text-align: center;
+    line-height: 50%;
+    font-size: 0.8em!important;
+}
+
+.reservation button, .enigme button, #CGU .modal-footer a,#modalcredit .modal-footer a, #questionmodal .modal-footer a,#questions .row .droite a{
+    color: black!important;
+    font-weight: bolder;
+}
+
+.horaire {
+    width: 40%;
+}
+
+tr:nth-child(odd) td {
+    background-color: rgb(216, 191, 151);
+    color: black;
+}
+
+.modal, .modal .modal-footer {
+    background-color: black;
+}
+
+.card {
+    background-color: black;
+    text-align: center;
+}
+
+#modalcredit * {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+}
+
+#modalcredit .modal-content a {
+    margin: 0;
+}
+
+#logowcs {
+    width: 2.5%;
+    margin-left: 1%;
+    vertical-align: middle;
+}
+
+#logowcs:hover {
+    animation: rotate 0.5s infinite linear;
+    animation-direction: reverse ;}
+
+.footer {
+    margin-top: 5%;
+}
