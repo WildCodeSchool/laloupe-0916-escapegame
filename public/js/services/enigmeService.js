@@ -1,4 +1,4 @@
-class adminService {
+class enigmeService {
 
     constructor($http) {
         this.$http = $http;
