@@ -11,9 +11,18 @@ const routes = ($routeProvider, $httpProvider) => {
             controller: 'loginController',
             controllerAs: 'vm'
         })
+
+        .when('/admin', {
+            templateUrl: 'views/admin.html',
+            controller: 'adminController',
+            controllerAs: 'vm'
+        })
+
         .otherwise({
             redirectTo: '/'
         })
+
+
 
     $httpProvider.interceptors.push(($q, $location, $rootScope, $window, sessionFactory) => {
         return {
@@ -21,23 +30,23 @@ const routes = ($routeProvider, $httpProvider) => {
 
                 config.headers = config.headers || {};
                 if ($window.localStorage.token) {
-                    sessionFactory.token = $window.localStorage.token
+                    sessionFactory.token = $window.localStorage.token;
                     sessionFactory.user = JSON.parse($window.localStorage.getItem('currentUser'));
-                    config.headers.authorization = $window.localStorage.token
+                    config.headers.authorization = $window.localStorage.token;
                 }
-                return config
+                return config;
             },
             responseError(response) {
                 if (response.status === 401 || response.status === 403) {
                     $rootScope.$emit('loginStatusChanged', false);
                     //$location.path('/login')
                 }
-                return $q.reject(response)
+                return $q.reject(response);
             }
-        }
-    })
+        };
+    });
 
-}
+};
 
 const loginStatus = ($rootScope, $window, sessionFactory) => {
 
