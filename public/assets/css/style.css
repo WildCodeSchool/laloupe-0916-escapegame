@@ -13,7 +13,6 @@ body {
 }
 
 /*NAV BAR*/
-
 nav {
     background-color: rgba(0, 0, 0, 0.5);
     border-bottom: 0.5px solid rgb(216, 191, 151);
@@ -28,8 +27,10 @@ ul li a {
     font-family: 'Playfair Display', serif;
     font-size: 1.1em;
 }
-
-
+/*bouton hamburger*/
+#mobile-demo{
+  background-color: black;
+}
 /*FIN NAV BAR*/
 
 .titre {
