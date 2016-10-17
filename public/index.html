@@ -13,26 +13,12 @@
         <link rel="stylesheet" href="assets/css/style.css">
     </head>
     <body>
-        <div id="fb-root"></div>
-        <script>
-            (function(d, s, id) {
-                var js,
-                    fjs = d.getElementsByTagName(s)[0];
-                if (d.getElementById(id))
-                    return;
-                js = d.createElement(s);
-                js.id = id;
-                js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.7";
-                fjs.parentNode.insertBefore(js, fjs);
-            }(document, 'script', 'facebook-jssdk'));
-        </script>
         <!-- navbar catégoerie -->
         <ng-include src="'views/navbar.html'"></ng-include>
         <ng-view></ng-view>
         <ng-include src="'views/footer.html'"></ng-include>
         <!-- modal -->
         <!-- modal question -->
-        <script src="vendor/jquery/dist/jquery.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
         <script src="vendor/angular/angular.min.js"></script>

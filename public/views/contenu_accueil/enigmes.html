@@ -2,14 +2,13 @@
     <div class="row">
         <div class="col l6 s12 gauche">
             <h2 class="titrearticles">Enigmes</h2>
-
             <p class="flow-text" ng-repeat='todo in vm.todos | orderBy: "nom_enigme"'>
                 <input type="text" class="form-control" placeholder="Enigme" ng-model='todo.nom_enigme'>
                 <input type="text" class="form-control" placeholder="Description" ng-model='todo.description_enigme'>
             </p>
         </div>
         <div class="col l6 s12 droite">
-            <img materialboxed class="materialboxed" src="assets/img/chateaulaloupe1.jpg" alt="chateau de la loupe" />
+            <img materialboxed class="materialboxed" src="assets/img/enigme.jpg" alt="chateau de la loupe" />
         </div>
     </div>
 </div>

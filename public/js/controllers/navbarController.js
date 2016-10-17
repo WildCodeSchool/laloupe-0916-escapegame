@@ -5,7 +5,6 @@ class navbarController {
         this.sessionFactory = sessionFactory;
         this.$rootScope = $rootScope;
         this.$location = $location;
-
         $rootScope.$on('loginStatusChanged', (event, isLogged) => {
             this.isLogged = isLogged;
             this.user = sessionFactory.user;

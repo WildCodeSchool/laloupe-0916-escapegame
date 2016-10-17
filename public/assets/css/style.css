@@ -3,7 +3,6 @@
         transform: rotateZ(360deg);
     }
 }
-
 body {
     background-color: black;
     color: rgb(216, 191, 151)!important;
@@ -36,6 +35,8 @@ ul li a {
 .titre {
     height: 100vh;
     margin-top: -100px;
+    background-image: url(../img/imgchateau.jpg);
+    background-size: cover;
 }
 
 .logofm {
@@ -71,6 +72,7 @@ ul li a {
 @media (max-width: 992px) {
     #horloge {
         padding-bottom: 100%;
+        left: 10%!important;
     }
 }
 
@@ -79,22 +81,20 @@ ul li a {
 }
 
 #accueil img {
-    width: 100%;
+    width: 75%;
     height: auto;
     position: absolute;
 }
 
 #horloge {
     position: relative;
+    width:  40%;
 }
 
 #aiguille {
     animation: rotate 60s infinite linear;
 }
-
-
 /*FIN DE HORLOGE*/
-
 h1, h2 {
     font-family: 'Tangerine', cursive;
     font-size: 9em;
@@ -128,9 +128,13 @@ a {
 }
 
 p {
-    font-size: 1.2em!important;
+    font-size: 1.1em!important;
 }
-
+@media (max-width: 992px) {
+    p {
+      font-size: 0.8;
+    }
+}
 h4 {
     font-size: 1.2em;
 }
