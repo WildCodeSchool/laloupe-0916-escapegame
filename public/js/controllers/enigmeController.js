@@ -1,13 +1,11 @@
 class enigmeController {
-
     constructor(enigmeService) {
-        this.todoService = enigmeService;
+        this.enigmeService = enigmeService;
         this.load();
-
     }
 
     load() {
-        this.todoService.getAll().then((res) => {
+        this.enigmeService.getAll().then((res) => {
             this.todos = res.data;
         });
     }
