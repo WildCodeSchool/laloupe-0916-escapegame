@@ -1,22 +1,12 @@
-<div class="container enigme" id="enigmes">
-    <div class="row">
+<div class="container enigme" id="enigmes" ng-controller="enigmeController as vm">
+    <div class="row"ng-repeat='todo in vm.todos | orderBy:nom_enigme'>
         <div class="col l6 s12 gauche">
-            <h2 class="titrearticles">Enigmes</h2>
-
-            <!--       <p class="flow-text" ng-repeat='todo in vm.todos | orderBy: "nom_enigme"'>
-                <input type="text" class="form-control" placeholder="Enigme" ng-model='todo.nom_enigme'>
-
-            <div class="form-group">
-           <input type="text" class="form-control" placeholder="Todo" ng-model='vm.todo'>
+          <h2>Enigmes</h2>
+                <div class="panel panel-default" >
+                  <h4 ng-show='vm.todos.length>0'>{{todo.nom_enigme}}</h4>
+                  <p ng-show='vm.todos.length>0'>{{todo.description_enigme}}</p>
+                </div>
             </div>
-            <h2 ng-show='vm.todos.length>0'>My todos</h2>
-            <div class="panel panel-default" ng-repeat='todo in vm.todos | orderBy: "todo.nom_enigme"'>
-                <input type="text" class="form-control" placeholder="Enigme" ng-model='todo.nom_enigme'><br/>
-
-                <input type="text" class="form-control" placeholder="Description" ng-model='todo.description_enigme'>
-            </div>
-        </div>
-      -->
             <div class="col l6 s12 droite">
                 <img materialboxed class="materialboxed" src="assets/img/enigme.jpg" alt="chateau de la loupe"/>
             </div>

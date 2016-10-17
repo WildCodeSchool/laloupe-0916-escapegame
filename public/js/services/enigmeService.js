@@ -8,5 +8,4 @@ class enigmeService {
         return this.$http.get('/api/todos');
     }
 
-    }
 }
