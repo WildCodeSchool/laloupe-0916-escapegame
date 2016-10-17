@@ -14,18 +14,7 @@
     </head>
     <body>
         <div id="fb-root"></div>
-        <script>
-            (function(d, s, id) {
-                var js,
-                    fjs = d.getElementsByTagName(s)[0];
-                if (d.getElementById(id))
-                    return;
-                js = d.createElement(s);
-                js.id = id;
-                js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.7";
-                fjs.parentNode.insertBefore(js, fjs);
-            }(document, 'script', 'facebook-jssdk'));
-        </script>
+
         <!-- navbar catégoerie -->
         <ng-include src="'views/navbar.html'"></ng-include>
         <ng-view></ng-view>
@@ -39,10 +28,13 @@
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-materialize/0.2.1/angular-materialize.min.js"></script>
         <script src="vendor/angular-route/angular-route.min.js"></script>
         <script src="js/factories/sessionFactory.js"></script>
+
         <script src="js/services/userService.js"></script>
-        <script src="js/services/enigmeService.js"></script>
+        <script src="js/services/adminService.js"></script>
+        <!--  <script src="js/services/enigmeService.js"></script> -->
+
         <script src="js/controllers/mainController.js"></script>
-        <script src="js/controllers/enigmeController.js"></script>
+        <!--   <script src="js/controllers/enigmeController.js"></script>  -->
         <script src="js/controllers/navbarController.js"></script>
         <script src="js/controllers/loginController.js"></script>
         <script src="js/controllers/adminController.js"></script>
