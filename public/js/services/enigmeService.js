@@ -4,14 +4,9 @@ class enigmeService {
         this.$http = $http;
     }
 
-
     getAll() {
-        return this.$http.get('/api/todos')
+        return this.$http.get('/api/todos');
     }
 
-    getOne(id) {
-        return this.$http.get('/api/todos/' + id)
     }
-
-
 }
