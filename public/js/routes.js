@@ -14,7 +14,7 @@ const routes = ($routeProvider, $httpProvider) => {
 
         .when('/admin', {
             templateUrl: 'views/admin.html',
-            controller: 'adminController',
+            controller: 'enigmeAdminController',
             controllerAs: 'vm'
         })
 
