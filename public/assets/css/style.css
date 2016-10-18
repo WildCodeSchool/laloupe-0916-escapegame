@@ -33,7 +33,7 @@ ul li a {
 /*FIN NAV BAR*/
 
 .titre {
-    height: 100.5vh;
+    height: 100vh;
     margin-top: -100px;
     background-image: url(../img/imgchateau.jpg);
     background-size: cover;

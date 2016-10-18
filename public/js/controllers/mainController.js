@@ -6,12 +6,12 @@ class mainController {
         $('#textarea1').trigger('autoresize');
         $('input#input_text, textarea#textarea1').characterCounter();
         $('.js-scrollTo').on('click', function() { // Au clic sur un élément
-          var page = $(this).attr('href'); // Page cible
-          var speed = +(window.scrollY+$(page).offset().top)/3; // Durée de l'animation (en ms)
-          $('html, body').animate({
-              scrollTop: $(page).offset().top - 128
-          }, speed); // Go
-          return false;
+            var page = $(this).attr('href'); // Page cible
+            var speed = 500; // Durée de l'animation (en ms)
+            $('html, body').animate({
+                scrollTop: $(page).offset().top - 100
+            }, speed); // Go
+            return false;
         });
         $(window).scroll(function() {
             if ($(window).scrollTop() > $('#accueil').height()) {
