@@ -11,8 +11,8 @@
                 </thead>
                 <tbody ng-repeat='openDay in vm.openDays'>
                     <tr>
-                        <td> ng-show='vm.openDays.length>0'>{{openDay.jour}}</td>
-                        <td> ng-show='vm.openDays.length>0'>{{openDay.horaires}}</td>
+                        <td ng-show='vm.openDays.length>0'>{{openDay.jour}}</td>
+                        <td ng-show='vm.openDays.length>0'>{{openDay.horaires}}</td>
                     </tr>
                 </tbody>
             </table>
