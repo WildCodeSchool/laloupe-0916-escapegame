@@ -9,34 +9,10 @@
                         <th data-field="name">Horaires</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody ng-repeat='openDay in vm.openDays'>
                     <tr>
-                        <td>Lundi</td>
-                        <td>9h-20h</td>
-                    </tr>
-                    <tr>
-                        <td>Mardi</td>
-                        <td>9h-20h</td>
-                    </tr>
-                    <tr>
-                        <td>Mercredi</td>
-                        <td>9h-20h</td>
-                    </tr>
-                    <tr>
-                        <td>Jeudi</td>
-                        <td>9h-20h</td>
-                    </tr>
-                    <tr>
-                        <td>Vendredi</td>
-                        <td>9h-20h</td>
-                    </tr>
-                    <tr>
-                        <td>Samedi</td>
-                        <td>9h-20h</td>
-                    </tr>
-                    <tr>
-                        <td>Dimanche</td>
-                        <td>9h-20h</td>
+                        <td> ng-show='vm.openDays.length>0'>{{openDay.jour}}</td>
+                        <td> ng-show='vm.openDays.length>0'>{{openDay.horaires}}</td>
                     </tr>
                 </tbody>
             </table>

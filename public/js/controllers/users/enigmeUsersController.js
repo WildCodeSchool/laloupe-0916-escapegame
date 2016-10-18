@@ -1,10 +1,16 @@
 class enigmeUsersController {
-    constructor(enigmeUsersService) {
+    constructor(enigmeUsersService, openDayAdminService) {
         this.enigmeUsersService = enigmeUsersService;
-        this.load();
+        this.loadEnigme();
+        this.openDayAdminService = openDayAdminService;
+        this.loadDays();
     }
-
-    load() {
+    loadDays() {
+        this.openDayAdminService.getAll().then((res) => {
+            this.openDays = res.data;
+        });
+    }
+    loadEnigme() {
         this.enigmeUsersService.getAll().then((res) => {
             this.todos = res.data;
         });
