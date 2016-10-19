@@ -1,11 +1,13 @@
-class enigmeUsersController {
-    constructor(enigmeUsersService, openDayUsersService, priceUsersService) {
+class usersController {
+    constructor(enigmeUsersService, openDayUsersService, priceUsersService, commentUsersService) {
         this.enigmeUsersService = enigmeUsersService;
         this.loadEnigme();
         this.openDayUsersService = openDayUsersService;
         this.loadDays();
         this.priceUsersService = priceUsersService;
         this.loadPrices();
+        this.commentUsersService = commentUsersService;
+        this.loadComments();
     }
     loadDays() {
         this.openDayUsersService.getAll().then((res) => {
@@ -20,6 +22,11 @@ class enigmeUsersController {
     loadPrices() {
         this.priceUsersService.getAll().then((res) => {
             this.prices = res.data;
+        });
+    }
+    loadComments() {
+        this.commentUsersService.getAll().then((res) => {
+            this.comments = res.data;
         });
     }
 }
