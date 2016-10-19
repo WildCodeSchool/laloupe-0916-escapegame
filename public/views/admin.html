@@ -5,7 +5,7 @@
             <form class="form-inline">
                 <button ng-click='vm.createEnigme()' class="btn btn-default">Nouvelle énigme</button>
             </form>
-            <h2 ng-show='vm.todos.length>0'>Enigmes</h2>
+            <h2>Enigmes</h2>
             <div class="panel panel-default" ng-repeat='todo in vm.todos | orderBy: "todo.nom_enigme"'>
                 <div class="panel-body">
                     <form class="form-inline">
@@ -23,7 +23,7 @@
             <br/>
             <!--Jours et horaires-->
 
-            <h2 ng-show='vm.openDays.length>0'>Jours et horaires</h2>
+            <h2>Jours et horaires</h2>
 
             <form class="form-inline">
                 <button ng-click='vm.createDays()' class="btn btn-default">Nouveau</button>
@@ -38,6 +38,30 @@
                         </div>
                         <button ng-click='vm.updateDays(openDay)' class="btn btn-default">Enregistrer</button>
                         <button ng-click='vm.deleteDays(openDay)' class="btn btn-danger">Supprimer</button>
+                    </form>
+                </div>
+            </div>
+            <br/>
+            <br/>
+            <br/>
+
+            <!--tarifs-->
+
+            <h2>Tarifs</h2>
+
+            <form class="form-inline">
+                <button ng-click='vm.createPrices()' class="btn btn-default">Nouveau</button>
+            </form>
+
+            <div class="panel panel-default" ng-repeat='price in vm.prices'>
+                <div class="panel-body">
+                    <form class="form-inline">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Nombre de joueurs" ng-model='price.joueur'>
+                            <input type="text" class="form-control" placeholder="Tarifs heures pleines / heures creuses" ng-model='price.prix'>
+                        </div>
+                        <button ng-click='vm.updatePrices(price)' class="btn btn-default">Enregistrer</button>
+                        <button ng-click='vm.deletePrices(price)' class="btn btn-danger">Supprimer</button>
                     </form>
                 </div>
             </div>

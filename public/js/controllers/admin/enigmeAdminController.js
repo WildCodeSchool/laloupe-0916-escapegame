@@ -1,11 +1,13 @@
 class enigmeAdminController {
-    constructor(enigmeAdminService, openDayAdminService) {
-        this.enigmeAdminService = enigmeAdminService;
-        this.openDayAdminService = openDayAdminService;
-        this.loadEnigme();
-        this.loadDays();
-    }
-
+    constructor(enigmeAdminService, openDayAdminService, priceAdminService) {
+            this.enigmeAdminService = enigmeAdminService;
+            this.loadEnigme();
+            this.openDayAdminService = openDayAdminService;
+            this.loadDays();
+            this.priceAdminService = priceAdminService;
+            this.loadPrices();
+        }
+        //Jour d'ouverture
     loadDays() {
         this.openDayAdminService.getAll().then((res) => {
             this.openDays = res.data;
@@ -26,11 +28,11 @@ class enigmeAdminController {
     }
 
     deleteDays(openDay) {
-        this.openDayAdminService.delete(openDay._id).then(() => {
-            this.loadDays();
-        });
-    }
-
+            this.openDayAdminService.delete(openDay._id).then(() => {
+                this.loadDays();
+            });
+        }
+        //Enigme
 
     loadEnigme() {
         this.enigmeAdminService.getAll().then((res) => {
@@ -52,10 +54,34 @@ class enigmeAdminController {
     }
 
     deleteEnigme(todo) {
-        this.enigmeAdminService.delete(todo._id).then(() => {
-            this.loadEnigme();
+            this.enigmeAdminService.delete(todo._id).then(() => {
+                this.loadEnigme();
+            });
+        }
+        //Tarifs
+    loadPrices() {
+        this.priceAdminService.getAll().then((res) => {
+            this.prices = res.data;
         });
     }
 
+    createPrices() {
+        this.priceAdminService.create(this.price).then(() => {
+            this.price = '';
+            this.loadPrices();
+        });
+    }
+
+    updatePrices(price) {
+        this.priceAdminService.update(price._id, price.joueur, price.prix).then(() => {
+            this.loadPrices();
+        });
+    }
+
+    deletePrices(price) {
+        this.priceAdminService.delete(price._id).then(() => {
+            this.loadPrices();
+        });
+    }
 
 }

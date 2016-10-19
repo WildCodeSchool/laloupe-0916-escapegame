@@ -159,9 +159,7 @@ h4 {
     font-weight: bolder;
 }
 
-.horaire {
-    width: 40%;
-}
+
 
 tr:nth-child(odd) td {
     background-color: rgb(216, 191, 151);
