@@ -1,10 +1,10 @@
 <div class="container enigme" id="enigmes">
-    <div class="row"ng-repeat='todo in vm.todos | orderBy:nom_enigme'>
+    <div class="row"ng-repeat='enigme in vm.enigmes | orderBy:nom_enigme'>
         <div class="col l6 s12 gauche">
           <h2>Enigmes</h2>
                 <div class="panel panel-default" >
-                  <h4 ng-show='vm.todos.length>0'>{{todo.nom_enigme}}</h4>
-                  <p ng-show='vm.todos.length>0'>{{todo.description_enigme}}</p>
+                  <h4 ng-show='vm.enigmes.length>0'>{{enigme.nom_enigme}}</h4>
+                  <p ng-show='vm.enigmes.length>0'>{{enigme.description_enigme}}</p>
                 </div>
             </div>
             <div class="col l6 s12 droite">

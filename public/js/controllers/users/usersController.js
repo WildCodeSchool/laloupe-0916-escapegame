@@ -16,7 +16,7 @@ class usersController {
     }
     loadEnigme() {
         this.enigmeUsersService.getAll().then((res) => {
-            this.todos = res.data;
+            this.enigmes = res.data;
         });
     }
     loadPrices() {

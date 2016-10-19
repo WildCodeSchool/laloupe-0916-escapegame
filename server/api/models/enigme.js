@@ -1,30 +1,30 @@
 import mongoose from 'mongoose';
 
-const todoSchema = new mongoose.Schema({
+const enigmeSchema = new mongoose.Schema({
     nom_enigme: String,
     description_enigme: String,
 });
 
-let model = mongoose.model('Todo', todoSchema);
+let model = mongoose.model('Enigme', enigmeSchema);
 
-export default class Todo {
+export default class Enigme {
 
     findAll(req, res) {
-        model.find({}, (err, todos) => {
+        model.find({}, (err, enigmes) => {
             if (err) {
                 res.sendStatus(403);
             } else {
-                res.json(todos);
+                res.json(enigmes);
             }
         });
     }
 
     findById(req, res) {
-        model.findById(req.params.id, (err, todo) => {
-            if (err || !todo) {
+        model.findById(req.params.id, (err, enigme) => {
+            if (err || !enigme) {
                 res.sendStatus(403);
             } else {
-                res.json(todo);
+                res.json(enigme);
             }
         });
     }
@@ -34,11 +34,11 @@ export default class Todo {
                 nom_enigme: req.body.nom_enigme,
                 description_enigme: req.body.description_enigme,
             },
-            (err, todo) => {
+            (err, enigme) => {
                 if (err) {
                     res.status(500).send(err.message);
                 } else {
-                    res.json(todo);
+                    res.json(enigme);
                 }
             });
     }
@@ -49,11 +49,11 @@ export default class Todo {
         }, {
             nom_enigme: req.body.nom_enigme,
             description_enigme: req.body.description_enigme,
-        }, (err, todo) => {
-            if (err || !todo) {
+        }, (err, enigme) => {
+            if (err || !enigme) {
                 res.status(500).send(err.message);
             } else {
-                res.json(todo);
+                res.json(enigme);
             }
         });
     }
