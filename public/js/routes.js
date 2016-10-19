@@ -12,15 +12,18 @@ const routes = ($routeProvider, $httpProvider) => {
             controllerAs: 'vm'
         })
 
-        .when('/admin', {
-            templateUrl: 'views/admin.html',
-            controller: 'adminController',
-            controllerAs: 'vm'
-        })
+    .when('/admin', {
+        templateUrl: 'views/admin.html',
+        controller: 'adminController',
+        resolve: {
+            connected: checkIsConnected
+        },
+        controllerAs: 'vm'
+    })
 
-        .otherwise({
-            redirectTo: '/'
-        });
+    .otherwise({
+        redirectTo: '/'
+    });
 
 
 
