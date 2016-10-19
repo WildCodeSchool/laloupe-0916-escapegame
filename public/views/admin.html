@@ -36,8 +36,8 @@
                             <input type="text" class="form-control" placeholder="Jours" ng-model='openDay.jour'>
                             <input type="text" class="form-control" placeholder="Horaires" ng-model='openDay.horaires'>
                         </div>
-                        <button ng-click='vm.updateDays(openDay)' class="btn btn-default">Enregistrer</button>
-                        <button ng-click='vm.deleteDays(openDay)' class="btn btn-danger">Supprimer</button>
+                        <button ng-click='vm.updateDays(openDay)' class="btn" onclick="Materialize.toast('Enregistrement', 3000,'rounded)">Enregistrer</button>
+                        <button ng-click='vm.deleteDays(openDay)' class="btn" onclick=" Materialize.toast('Suppression', 3000, 'rounded')">Supprimer</button>
                     </form>
                 </div>
             </div>
