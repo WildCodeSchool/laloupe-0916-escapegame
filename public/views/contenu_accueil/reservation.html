@@ -2,44 +2,37 @@
     <div class="row">
         <div class="col l6 m12 gauche">
             <h2 class="titrearticles">Réservations</h2>
-            <table class="col l6 responsive-table centered striped horaire ">
+            <table class="responsive-table centered striped horaire ">
                 <thead>
                     <tr>
                         <th data-field="id">Jours</th>
                         <th data-field="name">Horaires</th>
                     </tr>
                 </thead>
-                <tbody ng-repeat='openDay in vm.openDays'>
-                    <tr>
+                <tbody>
+                    <tr ng-repeat='openDay in vm.openDays'>
                         <td ng-show='vm.openDays.length>0'>{{openDay.jour}}</td>
                         <td ng-show='vm.openDays.length>0'>{{openDay.horaires}}</td>
                     </tr>
                 </tbody>
             </table>
-            <table class="col l4 offset-l2 responsive-table striped centered price ">
+        </div>
+        <div class="col l6 m12 droite">
+            <h2 class="titrearticles">Groupes et tarifs</h2>
+            <table class="responsive-table striped centered price ">
                 <thead>
                     <tr>
-                        <th data-field="id">Groupe</th>
-                        <th data-field="name">Prix</th>
+                        <th data-field="id">Nombre de joueurs</th>
+                        <th data-field="name">Prix par joueur</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>3</td>
-                        <td>18€</td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>16€</td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td>14€</td>
+                    <tr ng-repeat='price in vm.prices'>
+                        <td ng-show='vm.prices.length>0'>{{price.joueur}}</td>
+                        <td ng-show='vm.prices.length>0'>{{price.prix}}</td>
                     </tr>
                 </tbody>
             </table>
-        </div>
-        <div class="col l6 m12 droite">
         </div>
     </div>
 </div>
