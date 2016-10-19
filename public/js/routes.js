@@ -15,6 +15,9 @@ const routes = ($routeProvider, $httpProvider) => {
         .when('/admin', {
             templateUrl: 'views/admin.html',
             controller: 'enigmeAdminController',
+            resolve: {
+                connected: checkIsConnected
+            },
             controllerAs: 'vm'
         })
 
