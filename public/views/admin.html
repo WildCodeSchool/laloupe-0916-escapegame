@@ -1,3 +1,4 @@
+<script src="ckeditor/ckeditor.js"></script>
 <div class="navbar-fixed" ng-controller="navbarController as vm">
     <nav>
         <div class="nav-wrapper">
@@ -83,6 +84,21 @@
                         </div>
                         <button ng-click='vm.updatePrices(price)' class="waves-effect amber lighten-4 btn black modal-trigger" onclick=" Materialize.toast('Tarif enregistré', 2500, 'rounded')">Enregistrer</button>
                         <button ng-click='vm.deletePrices(price)' class="waves-effect amber lighten-4 btn black modal-trigger" onclick=" Materialize.toast('Tarif supprimé', 2500, 'rounded')">Supprimer</button>
+                    </form>
+                </div>
+            </div>
+            <!--commentaires-->
+            <h2 id="tarifs">Commentaires</h2>
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <form class="form-inline">
+                        <div class="form-group">
+                            <form method="POST" action="">
+                                <textarea cols="60" class="ckeditor" id="editeur" name="editeur" rows="10"></textarea>
+                            </form>
+                        </div>
+                        <button ng-click='vm.updateEnigmes(price)' class="waves-effect amber lighten-4 btn black modal-trigger" onclick=" Materialize.toast('Commentaire enregistré', 2500, 'rounded')">Enregistrer</button>
+                        <button ng-click='vm.deleteEnigmes(price)' class="waves-effect amber lighten-4 btn black modal-trigger" onclick=" Materialize.toast('Commentaire supprimé', 2500, 'rounded')">Supprimer</button>
                     </form>
                 </div>
             </div>
