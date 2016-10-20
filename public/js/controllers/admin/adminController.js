@@ -89,24 +89,15 @@ class adminController {
     loadComments() {
         this.commentAdminService.getAll().then((res) => {
             this.comments = res.data;
+            if (this.comments.length > 0) this.comment = this.comments[0].commentaire;
         });
     }
 
     createComments() {
+        if (this.comments.length > 0) this.comments.forEach((v, i) => {
+            this.commentAdminService.delete(v._id);
+        });
         this.commentAdminService.create(this.comment).then(() => {
-            this.comment = '';
-            this.loadComments();
-        });
-    }
-
-    updateComments(comment) {
-        this.commentAdminService.update(comment._id, comment.commentaire).then(() => {
-            this.loadComments();
-        });
-    }
-
-    deleteComments(comment) {
-        this.commentAdminService.delete(comment._id).then(() => {
             this.loadComments();
         });
     }
