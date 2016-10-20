@@ -24,7 +24,7 @@ nav {
 ul li a {
     color: rgb(216, 191, 151);
     font-family: 'Playfair Display', serif;
-    font-size: 1.1em;
+    font-size: 1.4em;
 }
 /*bouton hamburger*/
 #mobile-demo{
@@ -221,3 +221,6 @@ input:focus, textarea:focus, input:focus + label, textarea:focus + label {
    bottom: 50%;
    left:1%;
  }
+#accueil img, #enigmes .materialboxed, #actu img, #questions .image img{
+  margin-top: 10%;
+}
