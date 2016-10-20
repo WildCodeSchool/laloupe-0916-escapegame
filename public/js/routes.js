@@ -12,15 +12,18 @@ const routes = ($routeProvider, $httpProvider) => {
             controllerAs: 'vm'
         })
 
-        .when('/admin', {
-            templateUrl: 'views/admin.html',
-            controller: 'enigmeAdminController',
-            controllerAs: 'vm'
-        })
+    .when('/admin', {
+        templateUrl: 'views/admin.html',
+        controller: 'adminController',
+        resolve: {
+            connected: checkIsConnected
+        },
+        controllerAs: 'vm'
+    })
 
-        .otherwise({
-            redirectTo: '/'
-        })
+    .otherwise({
+        redirectTo: '/'
+    });
 
 
 
@@ -58,25 +61,25 @@ const loginStatus = ($rootScope, $window, sessionFactory) => {
         $window.localStorage.setItem('currentUser', JSON.stringify(sessionFactory.user));
         $window.localStorage.token = sessionFactory.token;
         sessionFactory.isLogged = isLogged;
-    })
+    });
 
-}
+};
 
 const checkIsConnected = ($q, $http, $location, $window, $rootScope) => {
-    let deferred = $q.defer()
+    let deferred = $q.defer();
 
     $http.get('/api/loggedin').success(() => {
         $rootScope.$emit('loginStatusChanged', true);
         // Authenticated
-        deferred.resolve()
+        deferred.resolve();
     }).error(() => {
         $window.localStorage.removeItem('token');
         $window.localStorage.removeItem('currentUser');
         $rootScope.$emit('loginStatusChanged', false);
         // Not Authenticated
-        deferred.reject()
-        $location.url('/login')
-    })
+        deferred.reject();
+        $location.url('/login');
+    });
 
-    return deferred.promise
-}
+    return deferred.promise;
+};

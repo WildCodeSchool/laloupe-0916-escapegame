@@ -18,6 +18,6 @@ module.exports = (app) => {
 
     router.delete('/:id', openDay.delete);
 
-    app.use('/openDays', router);
+    app.use('/openDays', Auth.hasAuthorization, router);
 
 };

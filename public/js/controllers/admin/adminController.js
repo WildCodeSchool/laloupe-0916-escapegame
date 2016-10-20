@@ -1,11 +1,13 @@
-class enigmeAdminController {
-    constructor(enigmeAdminService, openDayAdminService, priceAdminService) {
+class adminController {
+    constructor(enigmeAdminService, openDayAdminService, priceAdminService, commentAdminService) {
             this.enigmeAdminService = enigmeAdminService;
-            this.loadEnigme();
+            this.loadEnigmes();
             this.openDayAdminService = openDayAdminService;
             this.loadDays();
             this.priceAdminService = priceAdminService;
             this.loadPrices();
+            this.commentAdminService = commentAdminService;
+            this.loadComments();
         }
         //Jour d'ouverture
     loadDays() {
@@ -34,28 +36,28 @@ class enigmeAdminController {
         }
         //Enigme
 
-    loadEnigme() {
+    loadEnigmes() {
         this.enigmeAdminService.getAll().then((res) => {
-            this.todos = res.data;
+            this.enigmes = res.data;
         });
     }
 
-    createEnigme() {
-        this.enigmeAdminService.create(this.todo).then(() => {
-            this.todo = '';
-            this.loadEnigme();
+    createEnigmes() {
+        this.enigmeAdminService.create(this.enigme).then(() => {
+            this.enigme = '';
+            this.loadEnigmes();
         });
     }
 
-    updateEnigme(todo) {
-        this.enigmeAdminService.update(todo._id, todo.nom_enigme, todo.description_enigme).then(() => {
-            this.loadEnigme();
+    updateEnigmes(enigme) {
+        this.enigmeAdminService.update(enigme._id, enigme.nom_enigme, enigme.description_enigme).then(() => {
+            this.loadEnigmes();
         });
     }
 
-    deleteEnigme(todo) {
-            this.enigmeAdminService.delete(todo._id).then(() => {
-                this.loadEnigme();
+    deleteEnigmes(enigme) {
+            this.enigmeAdminService.delete(enigme._id).then(() => {
+                this.loadEnigmes();
             });
         }
         //Tarifs
@@ -79,8 +81,33 @@ class enigmeAdminController {
     }
 
     deletePrices(price) {
-        this.priceAdminService.delete(price._id).then(() => {
-            this.loadPrices();
+            this.priceAdminService.delete(price._id).then(() => {
+                this.loadPrices();
+            });
+        }
+        //Commentaire
+    loadComments() {
+        this.commentAdminService.getAll().then((res) => {
+            this.comments = res.data;
+        });
+    }
+
+    createComments() {
+        this.commentAdminService.create(this.comment).then(() => {
+            this.comment = '';
+            this.loadComments();
+        });
+    }
+
+    updateComments(comment) {
+        this.commentAdminService.update(comment._id, comment.commentaire).then(() => {
+            this.loadComments();
+        });
+    }
+
+    deleteComments(comment) {
+        this.commentAdminService.delete(comment._id).then(() => {
+            this.loadComments();
         });
     }
 

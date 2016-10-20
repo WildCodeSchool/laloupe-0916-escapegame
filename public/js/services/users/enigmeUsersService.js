@@ -5,7 +5,7 @@ class enigmeUsersService {
     }
 
     getAll() {
-        return this.$http.get('/api/todos');
+        return this.$http.get('/api/enigmes');
     }
 
 }
