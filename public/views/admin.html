@@ -88,19 +88,10 @@
                 </div>
             </div>
             <!--commentaires-->
-            <h2 id="tarifs">Commentaires</h2>
-            <div class="panel panel-default">
-                <div class="panel-body">
-                    <form class="form-inline">
-                        <div class="form-group">
-                            <form method="POST" action="">
-                                <textarea cols="60" class="ckeditor" id="editeur" name="editeur" rows="10"></textarea>
-                            </form>
-                        </div>
-                        <button ng-click='vm.updateEnigmes(price)' class="waves-effect amber lighten-4 btn black modal-trigger" onclick=" Materialize.toast('Commentaire enregistré', 2500, 'rounded')">Enregistrer</button>
-                        <button ng-click='vm.deleteEnigmes(price)' class="waves-effect amber lighten-4 btn black modal-trigger" onclick=" Materialize.toast('Commentaire supprimé', 2500, 'rounded')">Supprimer</button>
-                    </form>
-                </div>
-            </div>
+            <h2 id="commentaires">Commentaires</h2>
+            <form class="form-inline">
+              <input type="text" class="form-control" placeholder="Informations supplémentaires" ng-model='vm.comment'>
+                <button ng-click='vm.createComments()' class="waves-effect amber lighten-4 btn black modal-trigger" onclick=" Materialize.toast('Créé', 2500, 'rounded')">Mettre à jour</button>
+            </form>
         </div>
     </div>
