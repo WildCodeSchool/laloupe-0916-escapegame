@@ -12,11 +12,11 @@ module.exports = (app) => {
 
     router.get('/:id', comment.findById);
 
-    router.post('/', comment.create);
+    router.post('/', Auth.hasAuthorization, comment.create);
 
-    router.put('/:id', comment.update);
+    router.put('/:id', Auth.hasAuthorization, comment.update);
 
-    router.delete('/:id', comment.delete);
+    router.delete('/:id', Auth.hasAuthorization, comment.delete);
 
     app.use('/comments', router);
 

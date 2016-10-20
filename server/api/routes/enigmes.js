@@ -12,12 +12,12 @@ module.exports = (app) => {
 
     router.get('/:id', enigme.findById);
 
-    router.post('/', enigme.create);
+    router.post('/', Auth.hasAuthorization, enigme.create);
 
-    router.put('/:id', enigme.update);
+    router.put('/:id', Auth.hasAuthorization, enigme.update);
 
-    router.delete('/:id', enigme.delete);
+    router.delete('/:id', Auth.hasAuthorization, enigme.delete);
 
-    app.use('/enigmes',  router);
+    app.use('/enigmes', router);
 
 };
