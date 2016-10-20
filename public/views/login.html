@@ -2,7 +2,6 @@
     <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-4 col-lg-4 col-lg-offset-4">
         <div class='text-center'>
             <h1>Connexion à l'administration</h1>
-            <h2>connectez vous ici</h2>
         </div>
         <form class="form-horizontal" name="formConnect">
             <div class="form-group">
@@ -19,8 +18,9 @@
             </div>
             <div class="form-group">
                 <div class="col-sm-offset-2 col-sm-10">
-                    <button ng-click='vm.login()' ng-disabled="formConnect.$invalid" class="btn btn-primary pull-right">Sign in</button>
-                    <button ng-click='vm.createAccount()' ng-disabled="formConnect.$invalid" class="btn btn-link pull-right">Sign up</button>
+                    <button ng-click='vm.login()' ng-disabled="formConnect.$invalid" class="waves-effect amber lighten-4 btn black modal-trigger">Connexion</button>
+                    <button ng-click='vm.createAccount()' ng-disabled="formConnect.$invalid" class="waves-effect amber lighten-4 btn black modal-trigger">S'enregistrer</button>
+                    <a href="/#/" class="waves-effect amber lighten-4 btn black modal-trigger">Retour sur Escape Game</a>
                 </div>
             </div>
         </form>

@@ -14,7 +14,6 @@
     </head>
     <body>
         <!-- navbar catégoerie -->
-        <ng-include src="'views/navbar.html'"></ng-include>
         <ng-view></ng-view>
         <ng-include src="'views/footer.html'"></ng-include>
         <!-- modal -->
@@ -30,8 +29,8 @@
         <script src="js/controllers/navbarController.js"></script>
         <script src="js/controllers/loginController.js"></script>
         <!--controller Enigmes Jours d'ouverture-->
-        <script src="js/controllers/admin/enigmeAdminController.js"></script>
-        <script src="js/controllers/users/enigmeUsersController.js"></script>
+        <script src="js/controllers/admin/adminController.js"></script>
+        <script src="js/controllers/users/usersController.js"></script>
         <!--services Enigmes -->
         <script src="js/services/admin/enigmeAdminService.js"></script>
         <script src="js/services/users/enigmeUsersService.js"></script>
@@ -41,6 +40,9 @@
         <!--services Tarifs-->
         <script src="js/services/admin/priceAdminService.js"></script>
         <script src="js/services/users/priceUsersService.js"></script>
+        <!--services Commentaire-->
+        <script src="js/services/admin/commentAdminService.js"></script>
+        <script src="js/services/users/commentUsersService.js"></script>
 
         <script src="js/routes.js"></script>
         <script src="js/app.js"></script>
