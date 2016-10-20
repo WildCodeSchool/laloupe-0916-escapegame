@@ -12,12 +12,12 @@ module.exports = (app) => {
 
     router.get('/:id', openDay.findById);
 
-    router.post('/', openDay.create);
+    router.post('/', Auth.hasAuthorization, openDay.create);
 
-    router.put('/:id', openDay.update);
+    router.put('/:id', Auth.hasAuthorization, openDay.update);
 
-    router.delete('/:id', openDay.delete);
+    router.delete('/:id', Auth.hasAuthorization, openDay.delete);
 
-    app.use('/openDays', Auth.hasAuthorization, router);
+    app.use('/openDays', router);
 
 };

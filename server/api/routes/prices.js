@@ -12,12 +12,12 @@ module.exports = (app) => {
 
     router.get('/:id', price.findById);
 
-    router.post('/', price.create);
+    router.post('/', Auth.hasAuthorization, price.create);
 
-    router.put('/:id', price.update);
+    router.put('/:id', Auth.hasAuthorization, price.update);
 
-    router.delete('/:id', price.delete);
+    router.delete('/:id', Auth.hasAuthorization, price.delete);
 
-    app.use('/prices', Auth.hasAuthorization, router);
+    app.use('/prices', router);
 
 };
