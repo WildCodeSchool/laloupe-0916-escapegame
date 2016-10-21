@@ -13,10 +13,19 @@ class navbarController {
             }, speed); // Go
             return false;
         });
+        $(".button-collapse").sideNav();
+        $(window).scroll(function() {
+            if ($(window).scrollTop() > $('#accueil').height()) {
+                $('.navbar-fixed').addClass('navbar-color');
+            }
+            if ($(window).scrollTop() < $('#accueil').height()) {
+                $('.navbar-fixed').removeClass('navbar-color');
+            }
+        });
         $rootScope.$on('loginStatusChanged', (event, isLogged) => {
             this.isLogged = isLogged;
             this.user = sessionFactory.user;
-        })
+        });
     }
 
     logout() {
