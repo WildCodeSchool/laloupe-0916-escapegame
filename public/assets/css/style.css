@@ -3,6 +3,10 @@
         transform: rotateZ(360deg);
     }
 }
+.container-page{
+ margin: 0!important;
+ padding: 0!important;
+}
 
 body {
     background-color: black;
@@ -168,7 +172,9 @@ h4 {
     border-top: 0.5px solid rgb(216, 191, 151);
     width: 100vw;
     max-width: 100%;
-}
+    text-align: center;
+    font-size: 1.1em;
+  }
 
 .footer p, .footer a {
     text-align: center;

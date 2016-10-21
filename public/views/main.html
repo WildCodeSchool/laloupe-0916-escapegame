@@ -4,17 +4,35 @@
     <h2>La Loupe</h2>
     <a class="js-scrollTo" href="#accueil"><img class="imagetitre" src="assets/img/key.png" alt="clef" width="10%"/></a>
 </div>
-<!--- contenu acceuil-->
-<ng-include src="'views/contenu_accueil/accueil.html'"></ng-include>
-<!--- contenu Mission     -->
-<ng-include src="'views/contenu_accueil/enigmes.html'" ng-controller="usersController as vm"></ng-include>
-<!--- contenu actu--->
-<ng-include src="'views/contenu_accueil/actu.html'"></ng-include>
-<!--- contenu résa--->
-<ng-include src="'views/contenu_accueil/reservation.html'" ng-controller="usersController as vm"></ng-include>
-<!--- contenu question--->
-<ng-include src="'views/contenu_accueil/questions.html'"></ng-include>
-<!--- contenu contact--->
-<ng-include src="'views/contenu_accueil/contact.html'"></ng-include>
-<!--- contenu footer--->
-<ng-include src="'views/footer.html'"></ng-include>
+<div class="container-page">
+    <div class="row">
+        <div class="col l12 container-accueil">
+            <!--- contenu acceuil-->
+            <ng-include src="'views/contenu_accueil/accueil.html'"></ng-include>
+        </div>
+        <div class="col l12 container-enigme">
+            <!--- contenu Mission     -->
+            <ng-include src="'views/contenu_accueil/enigmes.html'" ng-controller="usersController as vm"></ng-include>
+        </div>
+        <div class="col l12 container-actu">
+            <!--- contenu actu--->
+            <ng-include src="'views/contenu_accueil/actu.html'"></ng-include>
+        </div>
+        <div class="col l12 container-reservation">
+            <!--- contenu résa--->
+            <ng-include src="'views/contenu_accueil/reservation.html'" ng-controller="usersController as vm"></ng-include>
+        </div>
+        <div class="col l12 container-questions">
+            <!--- contenu question--->
+            <ng-include src="'views/contenu_accueil/questions.html'"></ng-include>
+        </div>
+        <div class="col l12 container-contact">
+            <!--- contenu contact--->
+            <ng-include src="'views/contenu_accueil/contact.html'"></ng-include>
+        </div>
+        <div class="col l12 container-footer">
+            <!--- contenu footer--->
+            <ng-include src="'views/footer.html'"></ng-include>
+        </div>
+    </div>
+</div>
