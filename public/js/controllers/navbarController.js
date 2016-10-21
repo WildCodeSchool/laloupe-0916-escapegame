@@ -5,6 +5,7 @@ class navbarController {
         this.sessionFactory = sessionFactory;
         this.$rootScope = $rootScope;
         this.$location = $location;
+        $(".button-collapse").sideNav();
         $('.js-scrollTo').on('click', function() { // Au clic sur un élément
             var page = $(this).attr('href'); // Page cible
             var speed = 500; // Durée de l'animation (en ms)
@@ -13,7 +14,6 @@ class navbarController {
             }, speed); // Go
             return false;
         });
-        $(".button-collapse").sideNav();
         $(window).scroll(function() {
             if ($(window).scrollTop() > $('#accueil').height()) {
                 $('.navbar-fixed').addClass('navbar-color');

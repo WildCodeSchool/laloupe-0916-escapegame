@@ -19,7 +19,6 @@ nav {
     background-color: rgba(0, 0, 0, 0.5);
     border-bottom: 0.5px solid rgb(216, 191, 151);
 }
-
 .navbar-color nav {
     background-color: rgba(0, 0, 0, 1);
 }
@@ -27,7 +26,7 @@ nav {
 ul li a {
     color: rgb(216, 191, 151);
     font-family: 'Playfair Display', serif;
-    font-size: 1.4em;
+    font-size: 1.2em;
 }
 
 
@@ -150,10 +149,6 @@ p {
 
 h4 {
     font-size: 1.2em;
-}
-
-.materialboxed {
-    width: 100%;
 }
 
 .container, .row {
