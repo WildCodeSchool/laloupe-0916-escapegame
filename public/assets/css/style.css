@@ -3,6 +3,11 @@
         transform: rotateZ(360deg);
     }
 }
+.container-page{
+ margin: 0!important;
+ padding: 0!important;
+}
+
 body {
     background-color: black;
     color: rgb(216, 191, 151)!important;
@@ -11,12 +16,13 @@ body {
     background-image: url(../img/backgroundh1.png);
 }
 
+
 /*NAV BAR*/
+
 nav {
     background-color: rgba(0, 0, 0, 0.5);
     border-bottom: 0.5px solid rgb(216, 191, 151);
 }
-
 .navbar-color nav {
     background-color: rgba(0, 0, 0, 1);
 }
@@ -24,12 +30,17 @@ nav {
 ul li a {
     color: rgb(216, 191, 151);
     font-family: 'Playfair Display', serif;
-    font-size: 1.4em;
+    font-size: 1.2em;
 }
+
+
 /*bouton hamburger*/
-#mobile-demo{
-  background-color: black;
+
+#mobile-demo {
+    background-color: black;
 }
+
+
 /*FIN NAV BAR*/
 
 .titre {
@@ -88,13 +99,16 @@ ul li a {
 
 #horloge {
     position: relative;
-    height:  40%;
+    height: 40%;
 }
 
 #aiguille {
     animation: rotate 60s infinite linear;
 }
+
+
 /*FIN DE HORLOGE*/
+
 h1, h2 {
     font-family: 'Tangerine', cursive;
     font-size: 9em;
@@ -130,17 +144,15 @@ a {
 p {
     font-size: 1.1em!important;
 }
+
 @media (max-width: 992px) {
     p {
-      font-size: 0.8;
+        font-size: 0.8;
     }
 }
+
 h4 {
     font-size: 1.2em;
-}
-
-.materialboxed {
-    width: 100%;
 }
 
 .container, .row {
@@ -148,18 +160,27 @@ h4 {
     font-size: 1.1em;
 }
 
-.footer p {
+
+/* footer*/
+
+.footer {
+    border-top: 0.5px solid rgb(216, 191, 151);
+    width: 100vw;
+    max-width: 100%;
     text-align: center;
-    line-height: 50%;
+    font-size: 1.1em;
+  }
+
+.footer p, .footer a {
+    text-align: center;
+    line-height: 100%;
     font-size: 0.8em!important;
 }
 
-.reservation button, .enigme button, #CGU .modal-footer a, #modalcredit .modal-footer a, #questionmodal .modal-footer a, #questions .row .droite a, .btn{
+.reservation button, .enigme button, #CGU .modal-footer a, #modalcredit .modal-footer a, #questionmodal .modal-footer a, #questions .row .droite a, .btn {
     color: black!important;
     font-weight: bolder;
 }
-
-
 
 tr:nth-child(odd) td {
     background-color: rgb(216, 191, 151);
@@ -202,25 +223,34 @@ tr:nth-child(odd) td {
 .image img {
     width: 70%;
 }
+
+
 /* css du formulaire*/
-input:focus, textarea:focus, input:focus + label, textarea:focus + label {
-   color: rgb(216, 191, 151)!important;
-   border-bottom:1px solid rgb(216, 191, 151)!important;
-   box-shadow:0 1px 0 0 rgb(216, 191, 151)!important;
- }
- .prefix.active {
-   color: rgb(216, 191, 151)!important;
- }
- .input-field label {
-  color: rgb(216, 191, 151)!important;
- }
- /*admin */
- #toast-container {
-   top: auto !important;
-   right: auto !important;
-   bottom: 50%;
-   left:1%;
- }
-#accueil img, #enigmes .materialboxed, #actu img, #questions .image img{
-  margin-top: 10%;
+
+input:focus, textarea:focus, input:focus+label, textarea:focus+label {
+    color: rgb(216, 191, 151)!important;
+    border-bottom: 1px solid rgb(216, 191, 151)!important;
+    box-shadow: 0 1px 0 0 rgb(216, 191, 151)!important;
+}
+
+.prefix.active {
+    color: rgb(216, 191, 151)!important;
+}
+
+.input-field label {
+    color: rgb(216, 191, 151)!important;
+}
+
+
+/*admin */
+
+#toast-container {
+    top: auto !important;
+    right: auto !important;
+    bottom: 50%;
+    left: 1%;
+}
+
+#accueil img, #enigmes .materialboxed, #actu img, #questions .image img {
+    margin-top: 10%;
 }
