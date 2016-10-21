@@ -168,17 +168,13 @@ h4 {
     border-top: 0.5px solid rgb(216, 191, 151);
     width: 100vw;
     max-width: 100%;
+}
+
+.footer p, .footer a {
     text-align: center;
-    font-size: 1.1em;
-    background-color: black;
+    line-height: 100%;
+    font-size: 0.8em!important;
 }
-
-.footer p {
-    margin-bottom: 0px;
-}
-
-
-/*fin de footer*/
 
 .reservation button, .enigme button, #CGU .modal-footer a, #modalcredit .modal-footer a, #questionmodal .modal-footer a, #questions .row .droite a, .btn {
     color: black!important;
@@ -188,6 +184,10 @@ h4 {
 tr:nth-child(odd) td {
     background-color: rgb(216, 191, 151);
     color: black;
+}
+
+.modal, .modal .modal-footer {
+    background-color: black;
 }
 
 .card {
@@ -213,6 +213,10 @@ tr:nth-child(odd) td {
 #logowcs:hover {
     animation: rotate 0.5s infinite linear;
     animation-direction: reverse;
+}
+
+.footer {
+    margin-top: 5%;
 }
 
 .image img {
