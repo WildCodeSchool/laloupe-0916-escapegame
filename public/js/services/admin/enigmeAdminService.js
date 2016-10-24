@@ -4,10 +4,11 @@ class enigmeAdminService {
         this.$http = $http;
     }
 
-    create(data1, data2) {
+    create(data1, data2, data3) {
         return this.$http.post('/api/enigmes', {
             nom_enigme: data1,
             description_enigme: data2,
+            picture:data3,
         });
     }
 
@@ -19,10 +20,11 @@ class enigmeAdminService {
         return this.$http.get('/api/enigmes/' + id);
     }
 
-    update(id, data1, data2) {
+    update(id, data1, data2, data3) {
         return this.$http.put('/api/enigmes/' + id, {
             nom_enigme: data1,
             description_enigme: data2,
+            picture:data3,
         });
     }
 
