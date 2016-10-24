@@ -5,31 +5,26 @@
             <form>
                 <div class="col l6 m6 s11 input-field ">
                     <i class="material-icons prefix">contacts</i>
-                    <input type="text" name="name" class="validate" id="name"/>
+                    <input type="text" ng-model="email.name" class="validate" id="name"/>
                     <label for="name">Nom :</label>
-                </div>
-                <div class="col l6  m6 s11 input-field ">
-                    <i class="material-icons prefix">perm_identity</i>
-                    <input type="text" name="firstname" class="validate" id="firstname"/>
-                    <label for="firstname">Prénom :</label>
                 </div>
                 <div class="col l6 m6 s11 input-field">
                     <i class="material-icons prefix">email</i>
-                    <input type="email" name="email" data-error="wrong" data-success="right" class="validate" id="email"/>
+                    <input type="email" ng-model="email.email" data-error="wrong" data-success="right" class="validate" id="email"/>
                     <label for="email" class="validate">Email :</label>
                 </div>
                 <div class="col l6 m6 s11 input-field">
                     <i class="material-icons prefix">contact_phone</i>
-                    <input type="tel" name="tel" data-error="wrong" data-success="right" class="validate" id="tel"/>
+                    <input type="tel" ng-model="email.tel" data-error="wrong" data-success="right" class="validate" id="tel"/>
                     <label for="tel" class="validate">Téléphone :</label>
                 </div>
                 <div class="col l12 m6 s11 input-field">
                     <i class="material-icons prefix">comment</i>
-                    <textarea id="textarea1" class="materialize-textarea" name="demande" class="validate" maxlength="600"></textarea>
+                    <textarea id="textarea1" class="materialize-textarea" ng-model="email.msg" class="validate" maxlength="600"></textarea>
                     <label for="textarea1">Objet de votre demande (500 caractères maximum):</label>
                 </div>
                 <div class="col l12 m6 s11 input-field">
-                    <a class="waves-effect amber lighten-4 btn black modal-trigger">Envoyer la demande</a>
+                    <a class="waves-effect amber lighten-4 btn black modal-trigger" ng-click='vm.mailTransport(email)'>Envoyer la demande</a>
                 </div>
             </form>
         </div>
