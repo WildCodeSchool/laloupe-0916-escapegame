@@ -36,23 +36,23 @@
 </nav>
 </div>
 <div class="container">
-<div class="row">
-    <div class="col l8 m10 s12 offset-l2 offset-m2">
-        <h2 id="enigme">Enigmes</h2>
-        <form class="form-inline">
-            <button ng-click='vm.createEnigmes()' class="waves-effect amber lighten-4 btn black modal-trigger" onclick=" Materialize.toast('Insérez votre énigme', 2500, 'rounded')">Ajouter une énigme</button>
-        </form>
-        <div class="panel panel-default" ng-repeat='enigme in vm.enigmes | orderBy: "enigme.nom_enigme"'>
-            <div class="panel-body">
-                <form class="form-inline">
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Titre énigme" ng-model='enigme.nom_enigme'>
-                        <input type="text" class="form-control" placeholder="description énigme" ng-model='enigme.description_enigme'>
-                    </div>
-                    <button ng-click='vm.updateEnigmes(enigme)' class="waves-effect amber lighten-4 btn black modal-trigger" onclick=" Materialize.toast('Enigme enregistrée', 2500, 'rounded')">Enregistrer</button>
-                    <button ng-click='vm.deleteEnigmes(enigme)' class="waves-effect amber lighten-4 btn black modal-trigger" onclick=" Materialize.toast('Enigme supprimée', 2500, 'rounded')">Supprimer</button>
-                </form>
-            </div>
+<div class="row col l10 offset-l1">
+    <h2 id="enigme">Enigmes</h2>
+    <form class="form-inline">
+        <button ng-click='vm.createEnigmes()' class="waves-effect amber lighten-4 btn black modal-trigger" onclick=" Materialize.toast('Insérez votre énigme', 2500, 'rounded')">Ajouter une énigme</button>
+    </form>
+    <div class="panel panel-default" ng-repeat='enigme in vm.enigmes | orderBy: "enigme.nom_enigme"'>
+        <div class="panel-body">
+            <form class="form-inline">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Titre énigme" ng-model='enigme.nom_enigme'>
+                    <input type="text" class="form-control" placeholder="Description énigme" ng-model='enigme.description_enigme'>
+                    <input type="file" placeholder="Télécharger l'image de l'énigme" ng-model='enigme.picture'>
+                </div>
+                <button ng-click='vm.updateEnigmes(enigme)' class="waves-effect amber lighten-4 btn black modal-trigger" onclick=" Materialize.toast('Enigme enregistrée', 2500, 'rounded')">Enregistrer</button>
+                <button ng-click='vm.deleteEnigmes(enigme)' class="waves-effect amber lighten-4 btn black modal-trigger" onclick=" Materialize.toast('Enigme supprimée', 2500, 'rounded')">Supprimer</button>
+            </form>
+>>>>>>> loulappe
         </div>
     </div>
     <!--Jours et horaires-->
