@@ -47,12 +47,11 @@
                 <div class="form-group">
                     <input type="text" class="form-control" placeholder="Titre énigme" ng-model='enigme.nom_enigme'>
                     <input type="text" class="form-control" placeholder="Description énigme" ng-model='enigme.description_enigme'>
-                    <input type="file" placeholder="Télécharger l'image de l'énigme" ng-model='enigme.picture'>
+                    <input type="file" id="uploadfiles" placeholder="Télécharger l'image de l'énigme" ng-model='enigme.picture'>
                 </div>
                 <button ng-click='vm.updateEnigmes(enigme)' class="waves-effect amber lighten-4 btn black modal-trigger" onclick=" Materialize.toast('Enigme enregistrée', 2500, 'rounded')">Enregistrer</button>
                 <button ng-click='vm.deleteEnigmes(enigme)' class="waves-effect amber lighten-4 btn black modal-trigger" onclick=" Materialize.toast('Enigme supprimée', 2500, 'rounded')">Supprimer</button>
             </form>
->>>>>>> loulappe
         </div>
     </div>
     <!--Jours et horaires-->
