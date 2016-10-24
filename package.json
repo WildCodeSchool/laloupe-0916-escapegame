@@ -14,14 +14,21 @@
     "body-parser": "",
     "cors": "",
     "express": "",
+    "formidable": "^1.0.17",
+    "fs-extra": "^0.30.0",
+    "imagemagick": "^0.1.3",
     "jsonwebtoken": "",
     "method-override": "",
+    "mmmagic": "^0.4.5",
     "mongoose": "",
-    "morgan": ""
+    "morgan": "",
+    "nodemailer": "^2.6.4",
+    "quickthumb": "0.0.12"
   },
   "devDependencies": {
     "babel-cli": "^6.9.0",
-    "babel-core": "^6.9.0",
+    "babel-core": "^6.17.0",
+    "babel-loader": "^6.2.5",
     "babel-preset-es2015": "^6.9.0",
     "bower": ""
   }

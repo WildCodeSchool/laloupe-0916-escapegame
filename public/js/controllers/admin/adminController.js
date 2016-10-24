@@ -50,7 +50,7 @@ class adminController {
     }
 
     updateEnigmes(enigme) {
-        this.enigmeAdminService.update(enigme._id, enigme.nom_enigme, enigme.description_enigme).then(() => {
+        this.enigmeAdminService.update(enigme._id, enigme.nom_enigme, enigme.description_enigme, enigme.picture).then(() => {
             this.loadEnigmes();
         });
     }

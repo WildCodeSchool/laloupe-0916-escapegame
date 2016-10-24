@@ -254,3 +254,13 @@ input:focus, textarea:focus, input:focus+label, textarea:focus+label {
 #accueil img, #enigmes .materialboxed, #actu img, #questions .image img {
     margin-top: 10%;
 }
+/*page admin*/
+.btn-floating i {
+  color: rgb(216, 191, 151)!important;
+}
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder{
+  color: rgb(216, 191, 151);
+}
+.navbar-fixed{
+  font-size: 0.8em;
+}

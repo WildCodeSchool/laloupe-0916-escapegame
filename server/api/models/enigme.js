@@ -3,6 +3,7 @@ import mongoose from 'mongoose';
 const enigmeSchema = new mongoose.Schema({
     nom_enigme: String,
     description_enigme: String,
+    picture:String,
 });
 
 let model = mongoose.model('Enigme', enigmeSchema);
@@ -33,6 +34,7 @@ export default class Enigme {
         model.create({
                 nom_enigme: req.body.nom_enigme,
                 description_enigme: req.body.description_enigme,
+                picture:req.body.picture,
             },
             (err, enigme) => {
                 if (err) {
@@ -49,6 +51,8 @@ export default class Enigme {
         }, {
             nom_enigme: req.body.nom_enigme,
             description_enigme: req.body.description_enigme,
+            picture:req.body.picture,
+
         }, (err, enigme) => {
             if (err || !enigme) {
                 res.status(500).send(err.message);
