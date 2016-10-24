@@ -1,5 +1,5 @@
 class usersController {
-    constructor(enigmeUsersService, openDayUsersService, priceUsersService, commentUsersService) {
+    constructor(enigmeUsersService, openDayUsersService, priceUsersService, commentUsersService, mailUserService) {
         this.enigmeUsersService = enigmeUsersService;
         this.loadEnigme();
         this.openDayUsersService = openDayUsersService;
@@ -8,6 +8,7 @@ class usersController {
         this.loadPrices();
         this.commentUsersService = commentUsersService;
         this.loadComments();
+        this.mailUserService= mailUserService;
     }
     loadDays() {
         this.openDayUsersService.getAll().then((res) => {
@@ -29,4 +30,8 @@ class usersController {
             this.comments = res.data;
         });
     }
+    mailTransport(email) {
+        this.mailUserService.mailTransport(email.name, email.email, email.tel, email.msg);
+    }
+
 }

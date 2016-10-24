@@ -59,6 +59,9 @@ module.exports = function(app) {
             '<td style="padding-top:15px;padding-left:10px;"><p>Email: <b>' + req.body.email + '</b>,</p></td>' +
             '</tr>' +
             '<tr>' +
+            '<td style="padding-top:15px;padding-left:10px;"><p>tel: <b>' + req.body.tel + '</b>,</p></td>' +
+            '</tr>' +
+            '<tr>' +
             '<td align="left" style="padding-left:10px;"><p> Message: ' + req.body.msg + '</p></td>' +
             footer;
 
