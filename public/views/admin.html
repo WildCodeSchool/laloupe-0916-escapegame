@@ -16,91 +16,155 @@
                 <li>
                     <a class="js-scrollTo" href="#tarifs" class="waves-effect waves-yellow btn-small black">Tarifs</a>
                 </li>
+                <li>
+                    <a class="js-scrollTo" href="#commentaire" class="waves-effect waves-yellow btn-small black">Commentaire</a>
+                </li>
                 <li ng-show='vm.isLogged'>
                     <a href="" ng-click='vm.logout()'>
                         <span class="glyphicon glyphicon-log-out"></span>&nbsp;Se déconnecter</a>
                 </li>
-                <ul class="side-nav" id="mobile-demo">
-                    <li>
-                        <a class="js-scrollTo" href="#">Enigmes</a>
-                    </li>
-                    <li>
-                        <a class="js-scrollTo" href="#">Jours et Horaires</a>
-                    </li>
-                    <li>
-                        <a class="js-scrollTo" href="#">Tarifs</a>
-                    </li>
-                </ul>
-        </ul>
-    </div>
-</nav>
+                <li>
+                    <a href="/#/">Escape Game</button>
+                </li>
+            </ul>
+            <ul class="side-nav" id="mobile-demo">
+                <li>
+                    <a class="js-scrollTo" href="#enigme">Enigmes</a>
+                </li>
+                <li>
+                    <a class="js-scrollTo" href="#jours">Jours et Horaires</a>
+                </li>
+                <li>
+                    <a class="js-scrollTo" href="#tarifs">Tarifs</a>
+                </li>
+                <li>
+                    <a class="js-scrollTo" href="#commentaire">Commentaire</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 </div>
 <div class="container">
-<div class="row">
-    <div class="col l8 m10 s12 offset-l2 offset-m2">
-        <h2 id="enigme">Enigmes</h2>
-        <form class="form-inline">
-            <button ng-click='vm.createEnigmes()' class="waves-effect amber lighten-4 btn black modal-trigger" onclick=" Materialize.toast('Insérez votre énigme', 2500, 'rounded')">Ajouter une énigme</button>
-        </form>
-        <div class="panel panel-default" ng-repeat='enigme in vm.enigmes | orderBy: "enigme.nom_enigme"'>
-            <div class="panel-body">
-                <form class="form-inline">
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Titre énigme" ng-model='enigme.nom_enigme'>
-                        <input type="text" class="form-control" placeholder="description énigme" ng-model='enigme.description_enigme'>
-                    </div>
-                    <button ng-click='vm.updateEnigmes(enigme)' class="waves-effect amber lighten-4 btn black modal-trigger" onclick=" Materialize.toast('Enigme enregistrée', 2500, 'rounded')">Enregistrer</button>
-                    <button ng-click='vm.deleteEnigmes(enigme)' class="waves-effect amber lighten-4 btn black modal-trigger" onclick=" Materialize.toast('Enigme supprimée', 2500, 'rounded')">Supprimer</button>
-                </form>
+    <div class="row">
+        <div class="col l10 m12 s12 offset-l1">
+            <h2 id="enigme">Enigmes</h2>
+            <form class="form-inline">
+                <button ng-click='vm.createEnigmes()' class="waves-effect amber lighten-4 btn black modal-trigger" onclick=" Materialize.toast('Insérez votre énigme', 2500, 'rounded')">Ajouter une énigme</button>
+            </form>
+            <div class="panel panel-default" ng-repeat='enigme in vm.enigmes | orderBy: "enigme.nom_enigme"'>
+                <div class="panel-body">
+                    <form class="form-inline">
+                        <div class="row">
+                            <div class="col l10">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Titre énigme" ng-model='enigme.nom_enigme'>
+                                    <input type="text" class="form-control" placeholder="description énigme" ng-model='enigme.description_enigme'>
+                                </div>
+                            </div>
+                            <div class="col l1">
+                                <button ng-click='vm.updateEnigmes(enigme)' class="btn-floating btn-large waves-effect transparent " onclick=" Materialize.toast('Enigme enregistrée', 2500, 'rounded')">
+                                    <i class="material-icons">add</i>
+                                </button>
+                            </div>
+                            <div class="col l1">
+                                <button ng-click='vm.deleteEnigmes(enigme)' class="btn-floating btn-large waves-effect transparent " onclick=" Materialize.toast('Enigme supprimée', 2500, 'rounded')">
+                                    <i class="material-icons">delete</i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
-    </div>
-    <!--Jours et horaires-->
-    <div class="col l8 m10 s12 offset-l2 offset-m2">
-        <h2 id="jours">Jours et horaires</h2>
-        <form class="form-inline">
-            <button ng-click='vm.createDays()' class="waves-effect amber lighten-4 btn black modal-trigger" onclick=" Materialize.toast('Insérez votre jour', 2500, 'rounded')">Ajouter un jour</button>
-        </form>
-        <div class="panel panel-default" ng-repeat='openDay in vm.openDays'>
-            <div class="panel-body">
-                <form class="form-inline">
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Jours" ng-model='openDay.jour'>
-                        <input type="text" class="form-control" placeholder="Horaires" ng-model='openDay.horaires'>
-                    </div>
-                    <button ng-click='vm.updateDays(openDay)' class="waves-effect amber lighten-4 btn black modal-trigger" onclick=" Materialize.toast('Jour enregistré', 2500, 'rounded')">Enregistrer</button>
-                    <button ng-click='vm.deleteDays(openDay)' class="waves-effect amber lighten-4 btn black modal-trigger" onclick=" Materialize.toast('Jour supprimé', 2500, 'rounded')">Supprimer</button>
-                </form>
+        <!--Jours et horaires-->
+        <div class="col l10 m12 s12 offset-l1">
+            <h2 id="jours">Jours et horaires</h2>
+            <form class="form-inline">
+                <button ng-click='vm.createDays()' class="waves-effect amber lighten-4 btn black modal-trigger" onclick=" Materialize.toast('Insérez votre jour', 2500, 'rounded')">Ajouter un jour</button>
+            </form>
+            <div class="panel panel-default" ng-repeat='openDay in vm.openDays'>
+                <div class="panel-body">
+                    <form class="form-inline">
+                        <div class="row">
+                            <div class="col l10">
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col l6">
+                                            <input type="text" class="form-control" placeholder="Jours" ng-model='openDay.jour'>
+                                        </div>
+                                        <div class="col l6">
+                                            <input type="text" class="form-control" placeholder="Horaires" ng-model='openDay.horaires'>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col l1">
+                                <button ng-click='vm.updateDays(openDay)' class="btn-floating btn-large waves-effect transparent " onclick=" Materialize.toast('Jour enregistré', 2500, 'rounded')">
+                                    <i class="material-icons">add</i>
+                                </button>
+                            </div>
+                            <div class="col l1">
+                                <button ng-click='vm.deleteDays(openDay)' class="btn-floating btn-large waves-effect transparent " onclick=" Materialize.toast('Jour supprimé', 2500, 'rounded')">
+                                    <i class="material-icons">delete</i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
-    </div>
-    <!--tarifs-->
-    <div class="col l8 m10 s12 offset-l2 offset-m2">
-        <h2 id="tarifs">Tarifs</h2>
-        <form class="form-inline">
-            <button ng-click='vm.createPrices()' class="waves-effect amber lighten-4 btn black modal-trigger" onclick=" Materialize.toast('Insérez votre tarif', 2500, 'rounded')">Ajouter un tarif</button>
-        </form>
-        <div class="panel panel-default" ng-repeat='price in vm.prices'>
-            <div class="panel-body">
-                <form class="form-inline">
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Nombre de joueurs" ng-model='price.joueur'>
-                        <input type="text" class="form-control" placeholder="Tarifs heures pleines / heures creuses" ng-model='price.prix'>
-                    </div>
-                    <button ng-click='vm.updatePrices(price)' class="waves-effect amber lighten-4 btn black modal-trigger" onclick=" Materialize.toast('Tarif enregistré', 2500, 'rounded')">Enregistrer</button>
-                    <button ng-click='vm.deletePrices(price)' class="waves-effect amber lighten-4 btn black modal-trigger" onclick=" Materialize.toast('Tarif supprimé', 2500, 'rounded')">Supprimer</button>
-                </form>
+        <!--tarifs-->
+        <div class="col l10 m12 s12 offset-l1">
+            <h2 id="tarifs">Tarifs</h2>
+            <form class="form-inline">
+                <button ng-click='vm.createPrices()' class="waves-effect amber lighten-4 btn black modal-trigger" onclick=" Materialize.toast('Insérez votre tarif', 2500, 'rounded')">Ajouter un tarif</button>
+            </form>
+            <div class="panel panel-default" ng-repeat='price in vm.prices'>
+                <div class="panel-body">
+                    <form class="form-inline">
+                        <div class="row">
+                            <div class="col l10">
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col l6">
+                                            <input type="text" class="form-control" placeholder="Nombre de joueurs" ng-model='price.joueur'>
+                                        </div>
+                                        <div class="col l6">
+                                            <input type="text" class="form-control" placeholder="Tarifs heures pleines / heures creuses" ng-model='price.prix'>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col l1">
+                                <button ng-click='vm.updatePrices(price)' class="btn-floating btn-large waves-effect transparent" onclick=" Materialize.toast('Tarif enregistré', 2500, 'rounded')">
+                                    <i class="material-icons">add</i>
+                                </button>
+                            </div>
+                            <div class="col l1">
+                                <button ng-click='vm.deletePrices(price)' class="btn-floating btn-large waves-effect transparent" onclick=" Materialize.toast('Tarif supprimé', 2500, 'rounded')">
+                                    <i class="material-icons">delete</i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
+        <!--commentaires-->
+        <div class="col l10 m12 s12 offset-l1">
+            <h2 id="commentaire">Commentaire</h2>
+            <form class="form-inline">
+                <div class="row">
+                    <div class="col l10">
+                        <input type="text" class="form-control" placeholder="Information supplémentaire" ng-model='vm.comment'>
+                    </div>
+                    <div class="col l1">
+                        <button ng-click='vm.createComments()' class="btn-floating btn-large waves-effect transparent" onclick=" Materialize.toast('Créé', 2500, 'rounded')">
+                            <i class="material-icons">loop</i>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
     </div>
-    <!--commentaires-->
-    <div class="col l8 m10 s12 offset-l2 offset-m2">
-        <h2 id="commentaires">Commentaires</h2>
-        <form class="form-inline">
-            <input type="text" class="form-control" placeholder="Informations supplémentaires" ng-model='vm.comment'>
-            <button ng-click='vm.createComments()' class="waves-effect amber lighten-4 btn black modal-trigger" onclick=" Materialize.toast('Créé', 2500, 'rounded')">Mettre à jour</button>
-        </form>
-    </div>
-</div>
-</div>
 </div>
