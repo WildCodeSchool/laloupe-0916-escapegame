@@ -251,7 +251,7 @@ input:focus, textarea:focus, input:focus+label, textarea:focus+label {
     left: 1%;
 }
 
-#accueil img, #image .image, #actu img, #questions .image img {
+#accueil img, #image .image,#enigmes .image img, #actu img,.center iframe, #questions .image img {
     margin-top: 10%;
 }
 /*page admin*/
