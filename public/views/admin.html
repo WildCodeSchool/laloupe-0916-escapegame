@@ -59,8 +59,28 @@
                                 <div class="form-group">
                                     <input type="text" class="form-control" placeholder="Titre énigme" ng-model='enigme.nom_enigme'>
                                     <input type="text" class="form-control" placeholder="description énigme" ng-model='enigme.description_enigme'>
+                                    <input pict type="text" class="form-control" placeholder="Image énigme" ng-model='enigme.picture'>
+
+                                    <input type='file' accept='image/*' onchange='openFile(event)'><br>
+                                    <img id='output'>
+                                    <script>
+                                      var openFile = function(event) {
+                                        var input = event.target;
+
+                                        var reader = new FileReader();
+                                        reader.onload = function(){
+                                          var dataURL = reader.result;
+                                          var output = document.getElementById('output');
+                                          output.src = dataURL;
+
+                                        };
+                                        reader.readAsDataURL(input.files[0]);
+                                      };
+                                    </script>
+                                    console   dataURL
                                 </div>
                             </div>
+
                             <div class="col l1">
                                 <button ng-click='vm.updateEnigmes(enigme)' class="btn-floating btn-large waves-effect transparent " onclick=" Materialize.toast('Enigme enregistrée', 2500, 'rounded')">
                                     <i class="material-icons">mode_edit</i>
