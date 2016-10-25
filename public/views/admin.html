@@ -43,7 +43,7 @@
 </div>
 <div class="container">
     <div class="row">
-      <!--Enigme-->
+        <!--Enigme-->
         <div class="col l10 m12 s12 offset-l1">
             <h2 id="enigme">Enigmes</h2>
             <form class="form-inline">
@@ -57,8 +57,11 @@
                                 <div class="form-group">
                                     <input type="text" class="form-control" placeholder="Titre énigme" ng-model='enigme.nom_enigme'>
                                     <textarea type="text" class="materialize-textarea" placeholder="description énigme" ng-model='enigme.description_enigme'></textarea>
+                                    <input type="text" class="form-control" placeholder="description énigme" ng-model='enigme.description_enigme'>
+                                    <input pict type="text" class="form-control" placeholder="Image énigme" ng-model='enigme.picture'>
                                 </div>
                             </div>
+
                             <div class="col l1">
                                 <button ng-click='vm.updateEnigmes(enigme)' class="btn-floating btn-large waves-effect transparent " onclick=" Materialize.toast('Enigme enregistrée', 2500, 'rounded')">
                                     <i class="material-icons">mode_edit</i>
