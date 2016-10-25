@@ -1,11 +1,11 @@
 <div class="navbar-fixed" ng-controller="navbarController as vm">
     <nav>
         <div class="nav-wrapper">
-            <a class="brand-logo js-scrollTo logofm"><img src="assets/img/symbole.gif" alt="symbole" width="21%"/></a>
+            <a class="brand-logo logofm" href="/#/"><img src="assets/img/symbole.gif" alt="symbole" width="21%"/></a>
             <a href="#" data-activates="mobile-demo" class="button-collapse right">
                 <i class="material-icons">menu</i>
             </a>
-            <a class="namelogo">Administration Escape Game</a>
+            <a class="namelogo" href="/#/">Escape Game</a>
             <ul class="right hide-on-med-and-down ">
                 <li>
                     <a class="js-scrollTo" href="#enigme" class="waves-effect waves-yellow btn-small black">Enigmes</a>
@@ -22,9 +22,6 @@
                 <li ng-show='vm.isLogged'>
                     <a href="" ng-click='vm.logout()'>
                         <span class="glyphicon glyphicon-log-out"></span>&nbsp;Se déconnecter</a>
-                </li>
-                <li>
-                    <a href="/#/">Escape Game</button>
                 </li>
             </ul>
             <ul class="side-nav" id="mobile-demo">
@@ -46,6 +43,7 @@
 </div>
 <div class="container">
     <div class="row">
+      <!--Enigme-->
         <div class="col l10 m12 s12 offset-l1">
             <h2 id="enigme">Enigmes</h2>
             <form class="form-inline">
@@ -58,7 +56,7 @@
                             <div class="col l10">
                                 <div class="form-group">
                                     <input type="text" class="form-control" placeholder="Titre énigme" ng-model='enigme.nom_enigme'>
-                                    <input type="text" class="form-control" placeholder="description énigme" ng-model='enigme.description_enigme'>
+                                    <textarea type="text" class="materialize-textarea" placeholder="description énigme" ng-model='enigme.description_enigme'></textarea>
                                 </div>
                             </div>
                             <div class="col l1">
