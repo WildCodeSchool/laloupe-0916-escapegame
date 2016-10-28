@@ -224,7 +224,10 @@ tr:nth-child(odd) td {
     width: 70%;
 }
 
-
+.resa{
+  margin-top : 5%;
+  margin-left : 20%;
+}
 /* css du formulaire*/
 
 input:focus, textarea:focus, input:focus+label, textarea:focus+label {
