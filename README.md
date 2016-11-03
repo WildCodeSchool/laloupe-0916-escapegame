@@ -1,5 +1,3 @@
-# [MEAN](http://mean.io/) Starter kit
-
 Backend : Babel es2015
 
 Frontend : es2015 native
@@ -15,15 +13,15 @@ Frontend : es2015 native
 
 ### Auto-install
 
-[Bash script for Ubuntu & OSX](https://gist.github.com/JbPasquier/4857fd80af2d7ae2f987754db5887969)
+[Bash script for Ubuntu & OSX](https://gist.github.com/pierregaillard1986/173dfb97dc821cc0eed51f4de4baf776)
 
 ### Execution
 
 #### Installation
 
 ```bash
-git clone git@github.com:JbPasquier/mean-starter-es6.git
-cd mean-starter-es6
+git clone https://github.com/WildCodeSchool/laloupe-0916-escapegame.git
+cd laloupe-0916-escapegame.git
 npm install
 bower install
 ```
@@ -37,5 +35,5 @@ nodemon --exec npm start
 #### Production
 
 ```bash
-SECRET_TOKEN='secretToken' MONGODB_URI='mongodb://localhost:27017/mean-starter-es6' npm start
+SECRET_TOKEN='secretToken' MONGODB_URI='mongodb://localhost:8000/laloupe-0916-escapegame.git' npm start
 ```
