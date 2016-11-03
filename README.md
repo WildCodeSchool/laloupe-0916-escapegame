@@ -15,6 +15,11 @@ Frontend : es2015 native
 
 [Bash script for Ubuntu & OSX](https://gist.github.com/pierregaillard1986/173dfb97dc821cc0eed51f4de4baf776)
 
+download the script for your operating system and assigned the right to execution in a terminal
+(chmod u+x gist-escapegamelaloupe*)
+execute the script (in a terminal): ./gist-escapegamelaloupe*
+
+
 ### Execution
 
 #### Installation
